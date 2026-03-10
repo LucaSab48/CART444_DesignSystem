@@ -1,1 +1,12 @@
+:root{
 
+--color-primary: #111111;
+--color-accent: #ff3b3b;
+
+--font-primary: "Inter", sans-serif;
+
+--space-sm: 8px;
+--space-md: 16px;
+--space-lg: 32px;
+
+}
