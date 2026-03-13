@@ -44,37 +44,157 @@
         <p class="eyebrow">Foundation 02</p>
         <h1>Spacing</h1>
         <p class="page-intro">
-          This system uses an 8-point spacing model. Consistent spacing creates
-          visual rhythm, predictable layout relationships, and cleaner interface
-          structure.
+          Spacing defines the distance between elements and helps create a layout
+          that feels readable, balanced, and intentional. This system uses a
+          consistent spacing scale to organize content within components, between
+          groups of content, and across entire page layouts.
         </p>
       </header>
 
       <section class="content-section">
         <h2>Spacing scale</h2>
-        <div class="measurement-list">
-          <div class="measurement-row"><div class="measurement-bar bar-1"></div><span>4px</span></div>
-          <div class="measurement-row"><div class="measurement-bar bar-2"></div><span>8px</span></div>
-          <div class="measurement-row"><div class="measurement-bar bar-3"></div><span>16px</span></div>
-          <div class="measurement-row"><div class="measurement-bar bar-4"></div><span>24px</span></div>
-          <div class="measurement-row"><div class="measurement-bar bar-5"></div><span>32px</span></div>
-          <div class="measurement-row"><div class="measurement-bar bar-6"></div><span>48px</span></div>
-          <div class="measurement-row"><div class="measurement-bar bar-7"></div><span>64px</span></div>
-          <div class="measurement-row"><div class="measurement-bar bar-8"></div><span>96px</span></div>
+        <p class="page-intro">
+          The system uses a modular spacing scale based on small, repeatable values.
+          Smaller increments support detailed interface adjustments, while larger
+          values create separation between sections, cards, and layout groups.
+        </p>
+
+        <div class="spacing-scale-board">
+          <div class="spacing-grid-bg"></div>
+
+          <div class="spacing-square-group">
+            <div class="spacing-square-item">
+              <div class="spacing-square size-8"></div>
+              <p>8px</p>
+            </div>
+            <div class="spacing-square-item">
+              <div class="spacing-square size-16"></div>
+              <p>16px</p>
+            </div>
+            <div class="spacing-square-item">
+              <div class="spacing-square size-24"></div>
+              <p>24px</p>
+            </div>
+            <div class="spacing-square-item">
+              <div class="spacing-square size-32"></div>
+              <p>32px</p>
+            </div>
+            <div class="spacing-square-item">
+              <div class="spacing-square size-40"></div>
+              <p>40px</p>
+            </div>
+            <div class="spacing-square-item">
+              <div class="spacing-square size-48"></div>
+              <p>48px</p>
+            </div>
+            <div class="spacing-square-item">
+              <div class="spacing-square size-56"></div>
+              <p>56px</p>
+            </div>
+            <div class="spacing-square-item">
+              <div class="spacing-square size-64"></div>
+              <p>64px</p>
+            </div>
+          </div>
         </div>
       </section>
 
       <section class="content-section">
-        <h2>CSS tokens</h2>
+        <h2>Applied spacing in components</h2>
+        <p class="page-intro">
+          Spacing is not only a scale of values: it also shapes how interface
+          elements relate to each other. The example below shows how padding,
+          internal gaps, and spacing between components create clarity and rhythm.
+        </p>
+
+        <div class="spacing-application-board">
+          <div class="spacing-ui-row">
+            <div class="spacing-button-demo">
+              <span class="spacing-measure top-left">16</span>
+              <span class="spacing-measure top-right">16</span>
+              <span class="spacing-measure side-left">32</span>
+              <button class="demo-button">Button</button>
+            </div>
+
+            <div class="spacing-gap-demo">
+              <span class="spacing-measure gap-label">16</span>
+            </div>
+
+            <div class="spacing-input-demo">
+              <span class="spacing-measure input-top">8</span>
+              <span class="spacing-measure input-side">32</span>
+              <div class="demo-input">Text input</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <h2>Spacing tokens</h2>
+        <table class="table-like">
+          <thead>
+            <tr>
+              <th>Token</th>
+              <th>Value</th>
+              <th>Typical use</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>space-1</td>
+              <td>4px</td>
+              <td>Fine adjustments and very small separations</td>
+            </tr>
+            <tr>
+              <td>space-2</td>
+              <td>8px</td>
+              <td>Small internal spacing and compact UI details</td>
+            </tr>
+            <tr>
+              <td>space-3</td>
+              <td>16px</td>
+              <td>Default spacing inside components and between related items</td>
+            </tr>
+            <tr>
+              <td>space-4</td>
+              <td>24px</td>
+              <td>Medium separation between cards or content groups</td>
+            </tr>
+            <tr>
+              <td>space-5</td>
+              <td>32px</td>
+              <td>Section padding and larger layout spacing</td>
+            </tr>
+            <tr>
+              <td>space-6</td>
+              <td>48px</td>
+              <td>Large layout separation</td>
+            </tr>
+            <tr>
+              <td>space-7</td>
+              <td>64px</td>
+              <td>Major section breaks and spacious layouts</td>
+            </tr>
+            <tr>
+              <td>space-8</td>
+              <td>96px</td>
+              <td>Large vertical spacing between major page regions</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="content-section">
+        <h2>CSS implementation</h2>
         <pre>:root {
-  --space-1: 0.25rem;
-  --space-2: 0.5rem;
-  --space-3: 1rem;
-  --space-4: 1.5rem;
-  --space-5: 2rem;
-  --space-6: 3rem;
-  --space-7: 4rem;
-  --space-8: 6rem;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+  --space-6: 48px;
+  --space-7: 64px;
+  --space-8: 96px;
 }</pre>
       </section>
     </main>

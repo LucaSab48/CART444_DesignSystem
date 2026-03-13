@@ -265,6 +265,250 @@ h3 {
   font-family: var(--font-mono);
 }
 
+.spacing-scale-board {
+  position: relative;
+  margin-top: var(--space-4);
+  background: #f5f5f5;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 56px 48px 64px;
+  overflow: hidden;
+}
+
+.spacing-grid-bg {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(to right, rgba(255, 86, 86, 0.14) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 86, 86, 0.14) 1px, transparent 1px);
+  background-size: 16px 16px;
+  pointer-events: none;
+}
+
+.spacing-square-group {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  gap: 40px;
+  min-height: 280px;
+}
+
+.spacing-square-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  gap: 12px;
+  font-size: 0.95rem;
+  color: var(--color-text);
+}
+
+.spacing-square {
+  background: var(--color-accent);
+  flex-shrink: 0;
+}
+
+.size-8 { width: 8px; height: 8px; }
+.size-16 { width: 16px; height: 16px; }
+.size-24 { width: 24px; height: 24px; }
+.size-32 { width: 32px; height: 32px; }
+.size-40 { width: 40px; height: 40px; }
+.size-48 { width: 48px; height: 48px; }
+.size-56 { width: 56px; height: 56px; }
+.size-64 { width: 64px; height: 64px; }
+
+.spacing-application-board {
+  margin-top: var(--space-4);
+  background: #f5f5f5;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 56px 48px;
+}
+
+.spacing-ui-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+  min-height: 160px;
+}
+
+.spacing-button-demo,
+.spacing-input-demo,
+.spacing-gap-demo {
+  position: relative;
+}
+
+.demo-button {
+  border: none;
+  background: #0f62fe;
+  color: white;
+  font: inherit;
+  font-size: 1rem;
+  border-radius: 10px;
+  height: 64px;
+  padding: 0 32px;
+}
+
+.demo-input {
+  min-width: 290px;
+  height: 64px;
+  border: 2px solid #8d8d8d;
+  border-radius: 10px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  padding: 0 32px;
+  color: #393939;
+  font-size: 1rem;
+}
+
+.spacing-gap-demo {
+  width: 16px;
+  height: 2px;
+  background: transparent;
+}
+
+.spacing-measure {
+  position: absolute;
+  color: #d02670;
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.spacing-measure::before,
+.spacing-measure::after {
+  content: "";
+  position: absolute;
+  background: #d02670;
+}
+
+.top-left {
+  top: -30px;
+  left: 0;
+}
+
+.top-left::before,
+.top-left::after,
+.top-right::before,
+.top-right::after,
+.input-top::before,
+.input-top::after,
+.gap-label::before,
+.gap-label::after {
+  width: 1px;
+  height: 10px;
+  top: 18px;
+}
+
+.top-left::before,
+.input-top::before,
+.gap-label::before {
+  left: -4px;
+}
+
+.top-left::after,
+.input-top::after,
+.gap-label::after {
+  right: -4px;
+}
+
+.top-left,
+.top-right,
+.input-top,
+.gap-label {
+  border-top: 2px solid #d02670;
+  padding-top: 6px;
+}
+
+.top-right {
+  top: -30px;
+  right: 0;
+}
+
+.input-top {
+  top: -30px;
+  left: 16px;
+}
+
+.gap-label {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 16px;
+  text-align: center;
+}
+
+.side-left {
+  left: -46px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-left: 2px solid #d02670;
+  padding-left: 8px;
+}
+
+.side-left::before,
+.side-left::after,
+.input-side::before,
+.input-side::after {
+  width: 10px;
+  height: 1px;
+  left: -10px;
+}
+
+.side-left::before,
+.input-side::before {
+  top: -4px;
+}
+
+.side-left::after,
+.input-side::after {
+  bottom: -4px;
+}
+
+.input-side {
+  right: -48px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-right: 2px solid #d02670;
+  padding-right: 8px;
+}
+
+.input-side::before,
+.input-side::after {
+  right: -10px;
+  left: auto;
+}
+
+@media (max-width: 1024px) {
+  .spacing-square-group {
+    gap: 24px;
+    flex-wrap: wrap;
+    min-height: auto;
+  }
+
+  .spacing-application-board {
+    padding: 32px 24px;
+  }
+
+  .spacing-ui-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+  }
+
+  .spacing-gap-demo {
+    display: none;
+  }
+
+  .demo-input {
+    min-width: 240px;
+  }
+}
+
 .page-header {
   margin-bottom: var(--space-6);
 }
@@ -477,12 +721,12 @@ h3 {
 
 .callout-1 {
   top: 0;
-  left: 12px;
+  left: 5px;
 }
 
 .callout-2 {
   top: 0;
-  left: 71.5%;
+  left: 71.6%;
 }
 
 .callout-3 {
