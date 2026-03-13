@@ -1,1 +1,136 @@
-<link rel="stylesheet" href="../css/style.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Color — Luca Sabelli Design System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <div class="site-shell">
+    <aside class="sidebar">
+      <div class="sidebar-inner">
+        <a class="brand" href="../index.html">
+          <span class="brand-kicker">CART 444</span>
+          <span class="brand-title">Design System</span>
+        </a>
+
+        <nav class="nav-group">
+          <p class="nav-label">Overview</p>
+          <a class="nav-link" href="../index.html">Home</a>
+        </nav>
+
+        <nav class="nav-group">
+          <p class="nav-label">Foundations</p>
+          <a class="nav-link" href="grid.html">Grid</a>
+          <a class="nav-link" href="spacing.html">Spacing</a>
+          <a class="nav-link" href="breakpoints.html">Breakpoints</a>
+          <a class="nav-link" href="layers.html">Layers</a>
+          <a class="nav-link active" href="colors.html">Color</a>
+          <a class="nav-link" href="typography.html">Typography</a>
+          <a class="nav-link" href="aspect-ratios.html">Image Aspect Ratios</a>
+          <a class="nav-link" href="icons.html">Icons</a>
+        </nav>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <a class="back-link" href="../index.html">← Back to home</a>
+
+      <header class="page-header">
+        <p class="eyebrow">Foundation 05</p>
+        <h1>Color</h1>
+        <p class="page-intro">
+          The color system uses role-based tokens rather than isolated colors. This
+          creates consistency across pages, improves contrast control, and makes it
+          easier to reuse the same palette in the future portfolio website.
+        </p>
+      </header>
+
+      <section class="content-section">
+        <h2>Palette</h2>
+
+        <div class="token-grid">
+          <article class="token-card">
+            <div class="swatch swatch-primary"></div>
+            <div class="token-card-body">
+              <p class="label">Primary / Text</p>
+              <h3>#161616</h3>
+            </div>
+          </article>
+
+          <article class="token-card">
+            <div class="swatch swatch-background"></div>
+            <div class="token-card-body">
+              <p class="label">Background</p>
+              <h3>#F3F3F3</h3>
+            </div>
+          </article>
+
+          <article class="token-card">
+            <div class="swatch swatch-surface"></div>
+            <div class="token-card-body">
+              <p class="label">Surface</p>
+              <h3>#E8E8E8</h3>
+            </div>
+          </article>
+
+          <article class="token-card">
+            <div class="swatch swatch-accent"></div>
+            <div class="token-card-body">
+              <p class="label">Accent</p>
+              <h3>#0F62FE</h3>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <h2>Usage</h2>
+        <table class="table-like">
+          <thead>
+            <tr>
+              <th>Token</th>
+              <th>Purpose</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Primary</td>
+              <td>Main text, headings, and high-contrast interface content.</td>
+            </tr>
+            <tr>
+              <td>Background</td>
+              <td>Overall page background.</td>
+            </tr>
+            <tr>
+              <td>Surface</td>
+              <td>Cards, panels, boxes, and UI groupings.</td>
+            </tr>
+            <tr>
+              <td>Accent</td>
+              <td>Links, focus points, and highlighted interface actions.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="content-section">
+        <h2>CSS tokens</h2>
+        <pre>:root {
+  --color-bg: #f3f3f3;
+  --color-surface: #ffffff;
+  --color-surface-2: #e8e8e8;
+  --color-text: #161616;
+  --color-text-muted: #525252;
+  --color-border: #d9d9d9;
+  --color-accent: #0f62fe;
+}</pre>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Layers — Luca Sabelli Design System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <div class="site-shell">
+    <aside class="sidebar">
+      <div class="sidebar-inner">
+        <a class="brand" href="../index.html">
+          <span class="brand-kicker">CART 444</span>
+          <span class="brand-title">Design System</span>
+        </a>
+
+        <nav class="nav-group">
+          <p class="nav-label">Overview</p>
+          <a class="nav-link" href="../index.html">Home</a>
+        </nav>
+
+        <nav class="nav-group">
+          <p class="nav-label">Foundations</p>
+          <a class="nav-link" href="grid.html">Grid</a>
+          <a class="nav-link" href="spacing.html">Spacing</a>
+          <a class="nav-link" href="breakpoints.html">Breakpoints</a>
+          <a class="nav-link active" href="layers.html">Layers</a>
+          <a class="nav-link" href="colors.html">Color</a>
+          <a class="nav-link" href="typography.html">Typography</a>
+          <a class="nav-link" href="aspect-ratios.html">Image Aspect Ratios</a>
+          <a class="nav-link" href="icons.html">Icons</a>
+        </nav>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <a class="back-link" href="../index.html">← Back to home</a>
+
+      <header class="page-header">
+        <p class="eyebrow">Foundation 04</p>
+        <h1>Layers</h1>
+        <p class="page-intro">
+          Layers organize visual hierarchy. Background, content, overlays, and modal
+          surfaces must appear in a predictable order so the interface remains clear.
+        </p>
+      </header>
+
+      <section class="content-section">
+        <h2>Layer hierarchy</h2>
+        <div class="layer-stack">
+          <div class="layer layer-background">Background</div>
+          <div class="layer layer-content">Content</div>
+          <div class="layer layer-overlay">Overlay</div>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <h2>CSS tokens</h2>
+        <pre>:root {
+  --layer-base: 0;
+  --layer-content: 10;
+  --layer-overlay: 100;
+  --layer-modal: 1000;
+}</pre>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

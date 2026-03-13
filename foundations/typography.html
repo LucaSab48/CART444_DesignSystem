@@ -1,1 +1,107 @@
-<link rel="stylesheet" href="../css/style.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Typography — Luca Sabelli Design System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <div class="site-shell">
+    <aside class="sidebar">
+      <div class="sidebar-inner">
+        <a class="brand" href="../index.html">
+          <span class="brand-kicker">CART 444</span>
+          <span class="brand-title">Design System</span>
+        </a>
+
+        <nav class="nav-group">
+          <p class="nav-label">Overview</p>
+          <a class="nav-link" href="../index.html">Home</a>
+        </nav>
+
+        <nav class="nav-group">
+          <p class="nav-label">Foundations</p>
+          <a class="nav-link" href="grid.html">Grid</a>
+          <a class="nav-link" href="spacing.html">Spacing</a>
+          <a class="nav-link" href="breakpoints.html">Breakpoints</a>
+          <a class="nav-link" href="layers.html">Layers</a>
+          <a class="nav-link" href="colors.html">Color</a>
+          <a class="nav-link active" href="typography.html">Typography</a>
+          <a class="nav-link" href="aspect-ratios.html">Image Aspect Ratios</a>
+          <a class="nav-link" href="icons.html">Icons</a>
+        </nav>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <a class="back-link" href="../index.html">← Back to home</a>
+
+      <header class="page-header">
+        <p class="eyebrow">Foundation 06</p>
+        <h1>Typography</h1>
+        <p class="page-intro">
+          Typography creates hierarchy through size, weight, spacing, and rhythm.
+          This system uses a clear set of role-based text styles: display, headline,
+          title, body, label, and legal.
+        </p>
+      </header>
+
+      <section class="content-section">
+        <h2>Type roles</h2>
+
+        <div class="type-sample">
+          <p class="label">Display</p>
+          <div class="type-display">Design Systems Shape Experience</div>
+        </div>
+
+        <div class="type-sample">
+          <p class="label">Headline</p>
+          <div class="type-headline">Foundation pages define the visual language</div>
+        </div>
+
+        <div class="type-sample">
+          <p class="label">Title</p>
+          <div class="type-title">Typography organizes content into readable layers.</div>
+        </div>
+
+        <div class="type-sample">
+          <p class="label">Body</p>
+          <div class="type-body">
+            Body text is used for longer explanations, contextual descriptions, and
+            content throughout the design system documentation.
+          </div>
+        </div>
+
+        <div class="type-sample">
+          <p class="label">Label</p>
+          <div class="type-label">Used for small interface labels and metadata.</div>
+        </div>
+
+        <div class="type-sample">
+          <p class="label">Legal</p>
+          <div class="type-legal">Used for notes, captions, and small system text.</div>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <h2>CSS tokens</h2>
+        <pre>:root {
+  --font-sans: "IBM Plex Sans", Arial, sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+
+  --text-display: clamp(2.5rem, 5vw, 4.75rem);
+  --text-headline: clamp(2rem, 3vw, 3rem);
+  --text-title: 1.5rem;
+  --text-body: 1rem;
+  --text-label: 0.875rem;
+  --text-legal: 0.75rem;
+}</pre>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

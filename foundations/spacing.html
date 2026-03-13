@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spacing — Luca Sabelli Design System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <div class="site-shell">
+    <aside class="sidebar">
+      <div class="sidebar-inner">
+        <a class="brand" href="../index.html">
+          <span class="brand-kicker">CART 444</span>
+          <span class="brand-title">Design System</span>
+        </a>
+
+        <nav class="nav-group">
+          <p class="nav-label">Overview</p>
+          <a class="nav-link" href="../index.html">Home</a>
+        </nav>
+
+        <nav class="nav-group">
+          <p class="nav-label">Foundations</p>
+          <a class="nav-link" href="grid.html">Grid</a>
+          <a class="nav-link active" href="spacing.html">Spacing</a>
+          <a class="nav-link" href="breakpoints.html">Breakpoints</a>
+          <a class="nav-link" href="layers.html">Layers</a>
+          <a class="nav-link" href="colors.html">Color</a>
+          <a class="nav-link" href="typography.html">Typography</a>
+          <a class="nav-link" href="aspect-ratios.html">Image Aspect Ratios</a>
+          <a class="nav-link" href="icons.html">Icons</a>
+        </nav>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <a class="back-link" href="../index.html">← Back to home</a>
+
+      <header class="page-header">
+        <p class="eyebrow">Foundation 02</p>
+        <h1>Spacing</h1>
+        <p class="page-intro">
+          This system uses an 8-point spacing model. Consistent spacing creates
+          visual rhythm, predictable layout relationships, and cleaner interface
+          structure.
+        </p>
+      </header>
+
+      <section class="content-section">
+        <h2>Spacing scale</h2>
+        <div class="measurement-list">
+          <div class="measurement-row"><div class="measurement-bar bar-1"></div><span>4px</span></div>
+          <div class="measurement-row"><div class="measurement-bar bar-2"></div><span>8px</span></div>
+          <div class="measurement-row"><div class="measurement-bar bar-3"></div><span>16px</span></div>
+          <div class="measurement-row"><div class="measurement-bar bar-4"></div><span>24px</span></div>
+          <div class="measurement-row"><div class="measurement-bar bar-5"></div><span>32px</span></div>
+          <div class="measurement-row"><div class="measurement-bar bar-6"></div><span>48px</span></div>
+          <div class="measurement-row"><div class="measurement-bar bar-7"></div><span>64px</span></div>
+          <div class="measurement-row"><div class="measurement-bar bar-8"></div><span>96px</span></div>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <h2>CSS tokens</h2>
+        <pre>:root {
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2rem;
+  --space-6: 3rem;
+  --space-7: 4rem;
+  --space-8: 6rem;
+}</pre>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

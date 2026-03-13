@@ -1,30 +1,149 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-
-<link rel="stylesheet" href="css/style.css">
-
-<title>Luca Sabelli Design System</title>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luca Sabelli — Design System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
 </head>
-
 <body>
+  <div class="site-shell">
+    <aside class="sidebar">
+      <div class="sidebar-inner">
+        <a class="brand" href="index.html">
+          <span class="brand-kicker">CART 444</span>
+          <span class="brand-title">Design System</span>
+        </a>
 
-<h1>Design System</h1>
+        <nav class="nav-group">
+          <p class="nav-label">Overview</p>
+          <a class="nav-link active" href="index.html">Home</a>
+        </nav>
 
-<p>This design system defines the visual language for my portfolio website.</p>
+        <nav class="nav-group">
+          <p class="nav-label">Foundations</p>
+          <a class="nav-link" href="foundations/grid.html">Grid</a>
+          <a class="nav-link" href="foundations/spacing.html">Spacing</a>
+          <a class="nav-link" href="foundations/breakpoints.html">Breakpoints</a>
+          <a class="nav-link" href="foundations/layers.html">Layers</a>
+          <a class="nav-link" href="foundations/colors.html">Color</a>
+          <a class="nav-link" href="foundations/typography.html">Typography</a>
+          <a class="nav-link" href="foundations/aspect-ratios.html">Image Aspect Ratios</a>
+          <a class="nav-link" href="foundations/icons.html">Icons</a>
+        </nav>
+      </div>
+    </aside>
 
-<h2>Foundations</h2>
+    <main class="main-content">
+      <section class="hero">
+        <p class="eyebrow">Luca Sabelli</p>
+        <h1>Design System</h1>
+        <p class="lead">
+          This design system is the scaffold for my portfolio website. It adopts
+          structural principles from modern design systems and adapts them to a
+          visual language centered on clarity, atmosphere, and strong hierarchy.
+        </p>
+      </section>
 
-<ul>
+      <section class="content-section">
+        <div class="section-header">
+          <p class="eyebrow">Approach</p>
+          <h2>Adopt, then adapt visually</h2>
+        </div>
+        <div class="content-grid two-col">
+          <article class="card">
+            <h3>What I adopted</h3>
+            <p>
+              A 12-column grid, an 8-point spacing system, responsive breakpoints,
+              layered hierarchy, and standardized typography roles.
+            </p>
+          </article>
+          <article class="card">
+            <h3>What I adapted</h3>
+            <p>
+              Typography choices, color palette, image treatment, icon tone, and
+              the overall mood of the interface to fit my creative practice.
+            </p>
+          </article>
+        </div>
+      </section>
 
-<li><a href="foundations/colors.html">Colors</a></li>
-<li><a href="foundations/typography.html">Typography</a></li>
-<li><a href="foundations/grid.html">Grid</a></li>
+      <section class="content-section">
+        <div class="section-header">
+          <p class="eyebrow">Foundations</p>
+          <h2>Core building blocks</h2>
+        </div>
 
-</ul>
+        <div class="foundation-list">
+          <a class="foundation-item" href="foundations/grid.html">
+            <span class="foundation-number">01</span>
+            <div>
+              <h3>Grid</h3>
+              <p>12-column responsive layout structure.</p>
+            </div>
+          </a>
 
+          <a class="foundation-item" href="foundations/spacing.html">
+            <span class="foundation-number">02</span>
+            <div>
+              <h3>Spacing</h3>
+              <p>8-point rhythm used across all layouts and components.</p>
+            </div>
+          </a>
+
+          <a class="foundation-item" href="foundations/breakpoints.html">
+            <span class="foundation-number">03</span>
+            <div>
+              <h3>Breakpoints</h3>
+              <p>Rules for mobile, tablet, desktop, and large displays.</p>
+            </div>
+          </a>
+
+          <a class="foundation-item" href="foundations/layers.html">
+            <span class="foundation-number">04</span>
+            <div>
+              <h3>Layers</h3>
+              <p>Visual stacking and information hierarchy.</p>
+            </div>
+          </a>
+
+          <a class="foundation-item" href="foundations/colors.html">
+            <span class="foundation-number">05</span>
+            <div>
+              <h3>Color</h3>
+              <p>Palette roles, contrast, and usage across backgrounds and text.</p>
+            </div>
+          </a>
+
+          <a class="foundation-item" href="foundations/typography.html">
+            <span class="foundation-number">06</span>
+            <div>
+              <h3>Typography</h3>
+              <p>Display, headline, title, body, label, and legal roles.</p>
+            </div>
+          </a>
+
+          <a class="foundation-item" href="foundations/aspect-ratios.html">
+            <span class="foundation-number">07</span>
+            <div>
+              <h3>Image Aspect Ratios</h3>
+              <p>16:9, 4:3, 3:2, and 1:1 image systems.</p>
+            </div>
+          </a>
+
+          <a class="foundation-item" href="foundations/icons.html">
+            <span class="foundation-number">08</span>
+            <div>
+              <h3>Icons</h3>
+              <p>Stroke-based icon guidelines and sizing rules.</p>
+            </div>
+          </a>
+        </div>
+      </section>
+    </main>
+  </div>
 </body>
-
 </html>
