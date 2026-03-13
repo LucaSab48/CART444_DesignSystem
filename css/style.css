@@ -334,9 +334,9 @@ h3 {
 }
 
 .demo-col {
-  min-height: 120px;
-  background: #dde7ff;
-  border: 1px solid #b6ccff;
+  min-height: 140px;
+  background: linear-gradient(180deg, #dbe7ff 0%, #edf3ff 100%);
+  border: 1px solid #b8cbff;
 }
 
 .measurement-list {

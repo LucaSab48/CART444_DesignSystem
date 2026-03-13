@@ -44,14 +44,58 @@
         <p class="eyebrow">Foundation 01</p>
         <h1>Grid</h1>
         <p class="page-intro">
-          The system uses a 12-column responsive grid. This is a flexible structure
-          for organizing text, images, and interface elements across mobile, tablet,
-          and desktop layouts.
+          This design system adopts a 12-column responsive grid as its primary
+          layout structure. The grid creates consistency across pages, supports
+          responsive design, and establishes a sense of visual balance. In my own
+          practice, the grid also acts as a compositional scaffold: it supports
+          strong alignment, generous negative space, and the cinematic placement
+          of text and image throughout the portfolio.
         </p>
       </header>
 
       <section class="content-section">
-        <h2>12-column layout</h2>
+        <h2>Grid structure</h2>
+        <table class="table-like">
+          <thead>
+            <tr>
+              <th>Property</th>
+              <th>Value</th>
+              <th>Purpose</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Columns</td>
+              <td>12</td>
+              <td>Flexible layout system for text, image, and interface elements</td>
+            </tr>
+            <tr>
+              <td>Max content width</td>
+              <td>1100px</td>
+              <td>Keeps content readable on large screens</td>
+            </tr>
+            <tr>
+              <td>Gutter</td>
+              <td>24px</td>
+              <td>Creates consistent separation between columns</td>
+            </tr>
+            <tr>
+              <td>Outer margins</td>
+              <td>24px–48px</td>
+              <td>Maintains breathing room at different viewport sizes</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="content-section">
+        <h2>12-column demonstration</h2>
+        <p class="page-intro">
+          The example below visualizes the 12-column structure used throughout the
+          system. This underlying scaffold can support dense documentation layouts,
+          simple text pages, and more image-driven portfolio compositions.
+        </p>
+
         <div class="demo-grid">
           <div class="demo-col"></div>
           <div class="demo-col"></div>
@@ -69,41 +113,30 @@
       </section>
 
       <section class="content-section">
-        <h2>Grid specs</h2>
-        <table class="table-like">
-          <thead>
-            <tr>
-              <th>Property</th>
-              <th>Value</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Columns</td>
-              <td>12</td>
-            </tr>
-            <tr>
-              <td>Max content width</td>
-              <td>1100px</td>
-            </tr>
-            <tr>
-              <td>Gutter</td>
-              <td>24px</td>
-            </tr>
-            <tr>
-              <td>Outer page padding</td>
-              <td>32px–48px depending on viewport</td>
-            </tr>
-          </tbody>
-        </table>
+        <h2>Responsive behavior</h2>
+        <p class="page-intro">
+          On desktop, the grid supports wider multi-column compositions. On tablet
+          and mobile, the layout becomes more compact, prioritizing legibility and
+          vertical flow while keeping spacing and alignment consistent.
+        </p>
       </section>
 
       <section class="content-section">
-        <h2>CSS example</h2>
-        <pre>.demo-grid {
+        <h2>CSS implementation</h2>
+        <pre>.main-content {
+  max-width: 1100px;
+}
+
+.demo-grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 24px;
+}
+
+@media (max-width: 1024px) {
+  .demo-grid {
+    gap: 16px;
+  }
 }</pre>
       </section>
     </main>
