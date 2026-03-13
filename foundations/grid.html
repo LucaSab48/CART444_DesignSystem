@@ -44,12 +44,11 @@
         <p class="eyebrow">Foundation 01</p>
         <h1>Grid</h1>
         <p class="page-intro">
-          This design system adopts a 12-column responsive grid as its primary
-          layout structure. The grid creates consistency across pages, supports
-          responsive design, and establishes a sense of visual balance. In my own
-          practice, the grid also acts as a compositional scaffold: it supports
-          strong alignment, generous negative space, and the cinematic placement
-          of text and image throughout the portfolio.
+          This design system adopts a 12-column responsive grid as its primary layout
+          structure. Grids align elements and organize space to ensure a consistent
+          layout across pages and devices. In this system, margins frame the content,
+          gutters separate columns, and the column structure supports balanced and
+          scalable compositions for both documentation and portfolio layouts.
         </p>
       </header>
 
@@ -89,27 +88,98 @@
       </section>
 
       <section class="content-section">
-        <h2>12-column demonstration</h2>
+        <h2>Annotated grid demonstration</h2>
         <p class="page-intro">
-          The example below visualizes the 12-column structure used throughout the
-          system. This underlying scaffold can support dense documentation layouts,
-          simple text pages, and more image-driven portfolio compositions.
+          This diagram shows the three main parts of the grid system: margins, gutters,
+          and the column-based content area. Together, these elements create a layout
+          that feels structured, balanced, and consistent across screen sizes.
         </p>
 
-        <div class="demo-grid">
-          <div class="demo-col"></div>
-          <div class="demo-col"></div>
-          <div class="demo-col"></div>
-          <div class="demo-col"></div>
-          <div class="demo-col"></div>
-          <div class="demo-col"></div>
-          <div class="demo-col"></div>
-          <div class="demo-col"></div>
-          <div class="demo-col"></div>
-          <div class="demo-col"></div>
-          <div class="demo-col"></div>
-          <div class="demo-col"></div>
+        <div class="grid-figure">
+          <div class="grid-callout callout-1">
+            <span class="callout-dot">1</span>
+            <span class="callout-line"></span>
+          </div>
+
+          <div class="grid-callout callout-2">
+            <span class="callout-dot">2</span>
+            <span class="callout-line"></span>
+          </div>
+
+          <div class="grid-callout callout-3">
+            <span class="callout-dot">3</span>
+            <span class="callout-line horizontal"></span>
+          </div>
+
+          <div class="grid-stage">
+            <div class="grid-margin left"></div>
+
+            <div class="grid-content-area">
+              <div class="grid-overlay">
+                <div class="grid-columns">
+                  <div class="grid-column"></div>
+                  <div class="grid-column"></div>
+                  <div class="grid-column"></div>
+                  <div class="grid-column"></div>
+                  <div class="grid-column"></div>
+                  <div class="grid-column"></div>
+                  <div class="grid-column"></div>
+                  <div class="grid-column"></div>
+                  <div class="grid-column"></div>
+                  <div class="grid-column"></div>
+                  <div class="grid-column"></div>
+                  <div class="grid-column"></div>
+                </div>
+
+                <div class="grid-ui chrome-bar"></div>
+                <div class="grid-ui header-band"></div>
+
+                <div class="grid-card-row">
+                  <div class="grid-card"></div>
+                  <div class="grid-card"></div>
+                  <div class="grid-card"></div>
+                  <div class="grid-card"></div>
+                </div>
+
+                <div class="grid-card-row second-row">
+                  <div class="grid-card"></div>
+                  <div class="grid-card"></div>
+                  <div class="grid-card"></div>
+                  <div class="grid-card"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid-margin right"></div>
+          </div>
         </div>
+
+        <table class="table-like">
+          <thead>
+            <tr>
+              <th>Label</th>
+              <th>Element</th>
+              <th>Purpose</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Margin</td>
+              <td>Creates outer breathing room and frames the content area.</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Gutter</td>
+              <td>Separates columns and maintains consistent spacing between them.</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Column-based content area</td>
+              <td>Holds the main layout structure for text, media, and interface elements.</td>
+            </tr>
+          </tbody>
+        </table>
       </section>
 
       <section class="content-section">
@@ -127,15 +197,19 @@
   max-width: 1100px;
 }
 
-.demo-grid {
+.grid-stage {
+  display: grid;
+  grid-template-columns: 48px 1fr 48px;
+}
+
+.grid-columns {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  gap: 24px;
 }
 
 @media (max-width: 1024px) {
-  .demo-grid {
-    gap: 16px;
+  .grid-stage {
+    grid-template-columns: 28px 1fr 28px;
   }
 }</pre>
       </section>
