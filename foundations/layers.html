@@ -44,27 +44,166 @@
         <p class="eyebrow">Foundation 04</p>
         <h1>Layers</h1>
         <p class="page-intro">
-          Layers organize visual hierarchy. Background, content, overlays, and modal
-          surfaces must appear in a predictable order so the interface remains clear.
+          Layers organize visual hierarchy by placing interface elements on
+          different depth levels. In this design system, layering helps separate
+          background surfaces, content regions, elevated components, and overlays.
+          This creates clearer eye movement, stronger emphasis, and a more flexible
+          interface structure.
         </p>
       </header>
 
       <section class="content-section">
         <h2>Layer hierarchy</h2>
-        <div class="layer-stack">
-          <div class="layer layer-background">Background</div>
-          <div class="layer layer-content">Content</div>
-          <div class="layer layer-overlay">Overlay</div>
+        <p class="page-intro">
+          The system uses a small set of layer roles. Base layers hold the page
+          background and structural surfaces, content layers hold primary
+          information, elevated layers highlight interactive elements, and overlay
+          layers sit above the rest of the interface when additional focus is needed.
+        </p>
+
+        <div class="layers-board">
+          <div class="layer-step layer-base-card" tabindex="0">
+            <div class="layer-label-chip">Layer 1</div>
+            <div class="layer-panel">
+              <h3>Background</h3>
+              <p>Page background and base structural surfaces.</p>
+            </div>
+          </div>
+
+          <div class="layer-step layer-content-card" tabindex="0">
+            <div class="layer-label-chip">Layer 2</div>
+            <div class="layer-panel">
+              <h3>Content</h3>
+              <p>Main reading area, text blocks, and primary layout regions.</p>
+            </div>
+          </div>
+
+          <div class="layer-step layer-elevated-card" tabindex="0">
+            <div class="layer-label-chip">Layer 3</div>
+            <div class="layer-panel">
+              <h3>Elevated UI</h3>
+              <p>Cards, controls, and elements that need stronger emphasis.</p>
+            </div>
+          </div>
+
+          <div class="layer-step layer-overlay-card" tabindex="0">
+            <div class="layer-label-chip">Layer 4</div>
+            <div class="layer-panel">
+              <h3>Overlay</h3>
+              <p>Dialogs, menus, and temporary focused interface states.</p>
+            </div>
+          </div>
         </div>
       </section>
 
       <section class="content-section">
-        <h2>CSS tokens</h2>
+        <h2>Applied layering example</h2>
+        <p class="page-intro">
+          The example below shows how layers work together in an interface. A base
+          canvas supports the page, content blocks sit above it, cards are elevated
+          further, and a modal overlay sits on top to draw the user’s attention.
+        </p>
+
+        <div class="layer-application-board">
+          <div class="app-background-layer"></div>
+
+          <div class="app-header-layer">
+            <div class="app-nav-dot"></div>
+            <div class="app-nav-dot"></div>
+            <div class="app-nav-dot"></div>
+          </div>
+
+          <div class="app-content-strip"></div>
+
+          <div class="app-card-grid">
+            <div class="app-card"></div>
+            <div class="app-card"></div>
+            <div class="app-card"></div>
+            <div class="app-card"></div>
+          </div>
+
+          <div class="app-modal">
+            <p class="modal-kicker">Overlay</p>
+            <h3>Focused layer</h3>
+            <p>
+              Temporary surfaces like dialogs and menus appear above the main content
+              to signal priority and reduce distraction.
+            </p>
+            <button class="modal-button">Confirm</button>
+          </div>
+
+          <div class="layer-pointer pointer-base">
+            <span class="pointer-dot">1</span>
+            <span class="pointer-line"></span>
+          </div>
+
+          <div class="layer-pointer pointer-content">
+            <span class="pointer-dot">2</span>
+            <span class="pointer-line"></span>
+          </div>
+
+          <div class="layer-pointer pointer-elevated">
+            <span class="pointer-dot">3</span>
+            <span class="pointer-line"></span>
+          </div>
+
+          <div class="layer-pointer pointer-overlay">
+            <span class="pointer-dot">4</span>
+            <span class="pointer-line"></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <h2>Layer tokens</h2>
+        <table class="table-like">
+          <thead>
+            <tr>
+              <th>Token</th>
+              <th>Value</th>
+              <th>Use</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>layer-base</td>
+              <td>0</td>
+              <td>Background canvas and foundational surfaces</td>
+            </tr>
+            <tr>
+              <td>layer-content</td>
+              <td>10</td>
+              <td>Primary content regions and reading surfaces</td>
+            </tr>
+            <tr>
+              <td>layer-elevated</td>
+              <td>100</td>
+              <td>Cards, controls, and emphasized interface objects</td>
+            </tr>
+            <tr>
+              <td>layer-overlay</td>
+              <td>1000</td>
+              <td>Dialogs, popovers, menus, and temporary overlays</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="content-section">
+        <h2>CSS implementation</h2>
         <pre>:root {
   --layer-base: 0;
   --layer-content: 10;
-  --layer-overlay: 100;
-  --layer-modal: 1000;
+  --layer-elevated: 100;
+  --layer-overlay: 1000;
+}
+
+.modal {
+  z-index: var(--layer-overlay);
+}
+
+.card {
+  z-index: var(--layer-elevated);
 }</pre>
       </section>
     </main>

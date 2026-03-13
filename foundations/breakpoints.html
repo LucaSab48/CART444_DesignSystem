@@ -44,47 +44,137 @@
         <p class="eyebrow">Foundation 03</p>
         <h1>Breakpoints</h1>
         <p class="page-intro">
-          Breakpoints define how the design adapts across devices. They support
-          readability, layout flexibility, and responsive behavior.
+          Breakpoints define when the layout should adapt to different screen sizes.
+          They support responsive design by changing the structure, spacing, and
+          proportions of the interface so that content remains readable and usable
+          across mobile, tablet, desktop, and large desktop screens.
         </p>
       </header>
 
       <section class="content-section">
-        <h2>Responsive ranges</h2>
+        <h2>Responsive breakpoint ranges</h2>
+        <p class="page-intro">
+          This system uses four main viewport ranges. As the screen grows, the
+          layout can support more columns, wider content areas, and larger spatial
+          relationships. On smaller screens, the system simplifies into more compact,
+          vertically stacked layouts.
+        </p>
+
+        <div class="breakpoints-board">
+          <div class="breakpoints-ruler">
+            <div class="bp-marker bp-0">
+              <span class="bp-tag">0</span>
+            </div>
+            <div class="bp-marker bp-600">
+              <span class="bp-tag">600</span>
+            </div>
+            <div class="bp-marker bp-1024">
+              <span class="bp-tag">1024</span>
+            </div>
+            <div class="bp-marker bp-1440">
+              <span class="bp-tag">1440</span>
+            </div>
+            <div class="bp-marker bp-1920">
+              <span class="bp-tag">1920</span>
+            </div>
+          </div>
+
+          <div class="breakpoint-band">
+            <div class="bp-segment bp-mobile">Mobile</div>
+            <div class="bp-segment bp-tablet">Tablet</div>
+            <div class="bp-segment bp-desktop">Desktop</div>
+            <div class="bp-segment bp-large">Large Desktop</div>
+          </div>
+
+          <div class="breakpoint-columns-row">
+            <div class="bp-columns-pill mobile-pill">4 columns</div>
+            <div class="bp-columns-pill tablet-pill">8 columns</div>
+            <div class="bp-columns-pill desktop-pill">12 columns</div>
+          </div>
+
+          <div class="breakpoint-canvas-group">
+            <p class="canvas-label">Maximum content width</p>
+            <div class="canvas-bar canvas-max">
+              <span>Content area 1100px</span>
+            </div>
+          </div>
+
+          <div class="breakpoint-canvas-group">
+            <p class="canvas-label">Minimum content width</p>
+            <div class="canvas-bar canvas-min">
+              <span>Content area 280px</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <h2>Breakpoint behavior</h2>
         <table class="table-like">
           <thead>
             <tr>
-              <th>Size class</th>
-              <th>Width</th>
-              <th>Use</th>
+              <th>Range</th>
+              <th>Viewport width</th>
+              <th>Grid behavior</th>
+              <th>Typical layout use</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>Mobile</td>
-              <td>0–600px</td>
-              <td>Compact single-column layouts</td>
+              <td>0–599px</td>
+              <td>4-column structure</td>
+              <td>Single-column or tightly stacked layouts</td>
             </tr>
             <tr>
               <td>Tablet</td>
-              <td>601–1024px</td>
-              <td>Medium-width layouts and adjusted spacing</td>
+              <td>600–1023px</td>
+              <td>8-column structure</td>
+              <td>Expanded text layouts and medium-width groupings</td>
             </tr>
             <tr>
               <td>Desktop</td>
-              <td>1025px+</td>
-              <td>Expanded layout with sidebar and larger grids</td>
+              <td>1024–1439px</td>
+              <td>12-column structure</td>
+              <td>Main portfolio and documentation layouts</td>
+            </tr>
+            <tr>
+              <td>Large Desktop</td>
+              <td>1440px+</td>
+              <td>12-column structure with wider spacing</td>
+              <td>Large screens with more generous negative space</td>
             </tr>
           </tbody>
         </table>
       </section>
 
       <section class="content-section">
-        <h2>CSS example</h2>
-        <pre>@media (max-width: 1024px) {
-  .site-shell {
-    grid-template-columns: 1fr;
-  }
+        <h2>Implementation logic</h2>
+        <p class="page-intro">
+          Below the smallest breakpoint, the smallest layout rules are used. Above
+          the largest breakpoint, the largest layout rules are used. Between
+          breakpoints, the system shifts to the next defined layout range.
+        </p>
+      </section>
+
+      <section class="content-section">
+        <h2>CSS implementation</h2>
+        <pre>:root {
+  --bp-mobile: 600px;
+  --bp-tablet: 1024px;
+  --bp-desktop: 1440px;
+}
+
+@media (min-width: 600px) {
+  /* tablet rules */
+}
+
+@media (min-width: 1024px) {
+  /* desktop rules */
+}
+
+@media (min-width: 1440px) {
+  /* large desktop rules */
 }</pre>
       </section>
     </main>
