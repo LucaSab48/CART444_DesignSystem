@@ -44,90 +44,212 @@
         <p class="eyebrow">Foundation 05</p>
         <h1>Color</h1>
         <p class="page-intro">
-          The color system uses role-based tokens rather than isolated colors. This
-          creates consistency across pages, improves contrast control, and makes it
-          easier to reuse the same palette in the future portfolio website.
+          The color system defines the visual tone of the interface and creates a
+          consistent hierarchy across pages, components, and interactions. This
+          palette combines a soft light background, deep cool-toned interface
+          colors, and a warm accent to create a system that feels calm, structured,
+          and visually distinct.
         </p>
       </header>
 
       <section class="content-section">
-        <h2>Palette</h2>
+        <h2>Core palette</h2>
+        <p class="page-intro">
+          These four colors form the base of the system. They are used as
+          background, primary interface color, secondary text color, and accent.
+        </p>
 
-        <div class="token-grid">
-          <article class="token-card">
-            <div class="swatch swatch-primary"></div>
-            <div class="token-card-body">
-              <p class="label">Primary / Text</p>
-              <h3>#161616</h3>
-            </div>
-          </article>
-
-          <article class="token-card">
-            <div class="swatch swatch-background"></div>
-            <div class="token-card-body">
+        <div class="color-palette-grid">
+          <article class="color-swatch-card">
+            <div class="color-swatch large bg-background"></div>
+            <div class="color-swatch-body">
               <p class="label">Background</p>
-              <h3>#F3F3F3</h3>
+              <h3>#F5FBE6</h3>
+              <p>Soft page background and low-intensity surface tone.</p>
             </div>
           </article>
 
-          <article class="token-card">
-            <div class="swatch swatch-surface"></div>
-            <div class="token-card-body">
-              <p class="label">Surface</p>
-              <h3>#E8E8E8</h3>
+          <article class="color-swatch-card">
+            <div class="color-swatch large bg-primary"></div>
+            <div class="color-swatch-body">
+              <p class="label">Primary</p>
+              <h3>#215E61</h3>
+              <p>Primary interface color for emphasis, structure, and surfaces.</p>
             </div>
           </article>
 
-          <article class="token-card">
-            <div class="swatch swatch-accent"></div>
-            <div class="token-card-body">
+          <article class="color-swatch-card">
+            <div class="color-swatch large bg-secondary"></div>
+            <div class="color-swatch-body">
+              <p class="label">Secondary / Text</p>
+              <h3>#233D4D</h3>
+              <p>Main text color and dark supporting surface color.</p>
+            </div>
+          </article>
+
+          <article class="color-swatch-card">
+            <div class="color-swatch large bg-accent"></div>
+            <div class="color-swatch-body">
               <p class="label">Accent</p>
-              <h3>#0F62FE</h3>
+              <h3>#FE7F2D</h3>
+              <p>Accent color for buttons, callouts, and highlighted interactions.</p>
             </div>
           </article>
         </div>
       </section>
 
       <section class="content-section">
-        <h2>Usage</h2>
+        <h2>Color roles</h2>
+        <p class="page-intro">
+          Colors are assigned by role rather than only by hue. This makes the
+          palette easier to reuse consistently across the portfolio site and future
+          components.
+        </p>
+
         <table class="table-like">
           <thead>
             <tr>
+              <th>Role</th>
               <th>Token</th>
-              <th>Purpose</th>
+              <th>Hex</th>
+              <th>Use</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>Primary</td>
-              <td>Main text, headings, and high-contrast interface content.</td>
-            </tr>
-            <tr>
               <td>Background</td>
-              <td>Overall page background.</td>
+              <td><code>--color-background</code></td>
+              <td>#F5FBE6</td>
+              <td>Overall page background and light layout surfaces</td>
             </tr>
             <tr>
               <td>Surface</td>
-              <td>Cards, panels, boxes, and UI groupings.</td>
+              <td><code>--color-surface</code></td>
+              <td>#FFFFFF</td>
+              <td>Cards, panels, overlays, and elevated content blocks</td>
+            </tr>
+            <tr>
+              <td>Primary</td>
+              <td><code>--color-primary</code></td>
+              <td>#215E61</td>
+              <td>Primary interface emphasis, structure, and larger UI sections</td>
+            </tr>
+            <tr>
+              <td>Secondary</td>
+              <td><code>--color-secondary</code></td>
+              <td>#233D4D</td>
+              <td>Main text, dark surfaces, and strong contrast areas</td>
             </tr>
             <tr>
               <td>Accent</td>
-              <td>Links, focus points, and highlighted interface actions.</td>
+              <td><code>--color-accent</code></td>
+              <td>#FE7F2D</td>
+              <td>Calls to action, active states, highlights, and visual emphasis</td>
+            </tr>
+            <tr>
+              <td>Border</td>
+              <td><code>--color-border</code></td>
+              <td>#D9E0D0</td>
+              <td>Subtle boundaries between surfaces and layout regions</td>
+            </tr>
+            <tr>
+              <td>Text</td>
+              <td><code>--color-text</code></td>
+              <td>#233D4D</td>
+              <td>Default heading and body text</td>
+            </tr>
+            <tr>
+              <td>Muted text</td>
+              <td><code>--color-text-muted</code></td>
+              <td>#5F6B67</td>
+              <td>Supporting descriptions, captions, and secondary metadata</td>
             </tr>
           </tbody>
         </table>
       </section>
 
       <section class="content-section">
+        <h2>Usage combinations</h2>
+        <p class="page-intro">
+          The examples below show how the palette behaves in interface contexts.
+          These combinations define what text can sit on what background and how the
+          accent color should be used.
+        </p>
+
+        <div class="color-usage-grid">
+          <article class="usage-card usage-light">
+            <p class="usage-kicker">Default reading surface</p>
+            <h3>Dark text on light background</h3>
+            <p>
+              Body text and headings should primarily sit on the background or white
+              surface colors for maximum readability.
+            </p>
+          </article>
+
+          <article class="usage-card usage-primary">
+            <p class="usage-kicker">Primary surface</p>
+            <h3>Light text on primary</h3>
+            <p>
+              Primary blocks can be used for emphasized sections, navigation
+              treatments, or strong content groupings.
+            </p>
+          </article>
+
+          <article class="usage-card usage-secondary">
+            <p class="usage-kicker">Secondary surface</p>
+            <h3>Light text on secondary</h3>
+            <p>
+              The secondary color supports high-contrast content and deeper UI
+              states such as dark cards or major structural elements.
+            </p>
+          </article>
+
+          <article class="usage-card usage-accent">
+            <p class="usage-kicker">Accent interaction</p>
+            <h3>Accent for calls to action</h3>
+            <p>
+              The accent should be used sparingly so it retains visual strength for
+              buttons, links, and key interactive moments.
+            </p>
+            <button class="usage-button">Primary action</button>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <h2>Do / don’t</h2>
+        <div class="do-dont-grid">
+          <article class="guideline-card do-card">
+            <p class="label">Do</p>
+            <h3>Use the accent selectively</h3>
+            <p>
+              Keep orange reserved for important actions and highlights so it
+              remains visually meaningful.
+            </p>
+          </article>
+
+          <article class="guideline-card dont-card">
+            <p class="label">Don’t</p>
+            <h3>Overuse saturated color</h3>
+            <p>
+              Avoid using primary, secondary, and accent at equal intensity in the
+              same layout region. This weakens hierarchy.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section">
         <h2>CSS tokens</h2>
         <pre>:root {
-  --color-bg: #f3f3f3;
-  --color-surface: #ffffff;
-  --color-surface-2: #e8e8e8;
-  --color-text: #161616;
-  --color-text-muted: #525252;
-  --color-border: #d9d9d9;
-  --color-accent: #0f62fe;
+  --color-background: #F5FBE6;
+  --color-surface: #FFFFFF;
+  --color-primary: #215E61;
+  --color-secondary: #233D4D;
+  --color-accent: #FE7F2D;
+  --color-border: #D9E0D0;
+  --color-text: #233D4D;
+  --color-text-muted: #5F6B67;
 }</pre>
       </section>
     </main>
