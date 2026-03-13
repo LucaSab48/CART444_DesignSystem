@@ -1,3 +1,5 @@
+@import url('hind.css');
+@import url('khand.css');
 :root {
   --color-background: #F5FBE6;
   --color-surface: #FFFFFF;
@@ -32,19 +34,20 @@
   --color-accent-line-strong: rgba(254, 127, 45, 0.92);
   --color-accent-line-soft: rgba(254, 127, 45, 0.4);
 
-  --font-sans: "IBM Plex Sans", Arial, sans-serif;
-  --font-mono: "IBM Plex Mono", monospace;
+  --font-display: "Khand-Bold", sans-serif;
+  --font-body: "Hind-Regular", sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Consolas, monospace;
 
-  --text-display: clamp(2.5rem, 5vw, 4.75rem);
-  --text-headline: clamp(2rem, 3vw, 3rem);
-  --text-title: 1.5rem;
-  --text-body: 1rem;
+  --text-display: clamp(3rem, 6vw, 5.5rem);
+  --text-headline: clamp(2.25rem, 4vw, 3.5rem);
+  --text-title: 2rem;
+  --text-body: 1.05rem;
   --text-label: 0.875rem;
   --text-legal: 0.75rem;
 
-  --lh-tight: 1.05;
-  --lh-snug: 1.2;
-  --lh-body: 1.55;
+  --lh-tight: 1;
+  --lh-snug: 1.15;
+  --lh-body: 1.65;
 
   --space-1: 0.25rem;
   --space-2: 0.5rem;
@@ -76,9 +79,9 @@ html {
 
 body {
   margin: 0;
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
   font-size: var(--text-body);
-  line-height: 1.65;
+  line-height: var(--lh-body);
   letter-spacing: 0.01em;
   color: var(--color-text);
   background: var(--color-background);
@@ -154,8 +157,10 @@ pre {
 }
 
 .brand-title {
+  font-family: var(--font-display);
   font-size: 1.4rem;
   font-weight: 600;
+  line-height: var(--lh-snug);
 }
 
 .nav-group {
@@ -165,6 +170,7 @@ pre {
 }
 
 .nav-label {
+  font-family: var(--font-body);
   margin-bottom: var(--space-2);
   font-size: var(--text-legal);
   letter-spacing: 0.08em;
@@ -173,6 +179,7 @@ pre {
 }
 
 .nav-link {
+  font-family: var(--font-body);
   color: rgba(255, 255, 255, 0.82);
   padding: 0.45rem 0;
   transition: color 0.2s ease;
@@ -193,6 +200,7 @@ pre {
 }
 
 .eyebrow {
+  font-family: var(--font-body);
   margin-bottom: var(--space-2);
   font-size: var(--text-legal);
   text-transform: uppercase;
@@ -203,8 +211,17 @@ pre {
 h1, h2, h3, h4 {
   margin-top: 0;
   margin-bottom: var(--space-3);
-  line-height: var(--lh-tight);
   font-weight: 500;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  line-height: var(--lh-tight);
+}
+
+h4 {
+  font-family: var(--font-body);
+  line-height: var(--lh-snug);
 }
 
 h1 {
@@ -495,6 +512,7 @@ h3 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  font-family: var(--font-body);
   min-width: 82px;
   height: 34px;
   padding: 0 14px;
@@ -668,6 +686,7 @@ h3 {
 }
 
 .modal-kicker {
+  font-family: var(--font-body);
   font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -704,6 +723,7 @@ h3 {
 }
 
 .pointer-dot {
+  font-family: var(--font-body);
   width: 42px;
   height: 42px;
   border-radius: 999px;
@@ -865,6 +885,7 @@ h3 {
 
 .bp-tag {
   position: absolute;
+  font-family: var(--font-body);
   top: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -892,6 +913,7 @@ h3 {
 .bp-segment {
   display: flex;
   align-items: center;
+  font-family: var(--font-body);
   padding: 0 16px;
   font-size: 1rem;
   color: white;
@@ -913,6 +935,7 @@ h3 {
   position: absolute;
   display: inline-flex;
   align-items: center;
+  font-family: var(--font-body);
   height: 40px;
   padding: 0 26px;
   background: var(--color-secondary);
@@ -943,6 +966,7 @@ h3 {
 }
 
 .canvas-label {
+  font-family: var(--font-body);
   margin-bottom: 10px;
   font-size: 0.95rem;
   color: var(--color-text);
@@ -1145,6 +1169,7 @@ h3 {
 
 .spacing-measure {
   position: absolute;
+  font-family: var(--font-body);
   color: var(--color-accent);
   font-size: 14px;
   font-weight: 500;
@@ -1348,6 +1373,7 @@ h3 {
 }
 
 .label {
+  font-family: var(--font-body);
   font-size: var(--text-label);
   color: var(--color-text-muted);
   letter-spacing: 0.01em;
@@ -1363,6 +1389,184 @@ h3 {
 .swatch-surface { background: var(--color-surface); }
 .swatch-accent { background: var(--color-accent); }
 .swatch-muted { background: var(--color-text-muted); }
+
+.type-pairing-board {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-4);
+  margin-top: var(--space-4);
+}
+
+.type-pair-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 18px;
+  padding: 28px;
+}
+
+.font-demo-khand {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 4.25rem);
+  line-height: var(--lh-tight);
+  margin-bottom: 10px;
+}
+
+.font-demo-hind {
+  font-family: var(--font-body);
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  line-height: 1.2;
+  margin-bottom: 10px;
+  color: var(--color-text);
+}
+
+.font-meta {
+  font-family: var(--font-body);
+  color: var(--color-text-muted);
+  margin-bottom: 0;
+}
+
+.type-scale-stack {
+  display: grid;
+  gap: var(--space-4);
+  margin-top: var(--space-4);
+}
+
+.type-role-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 18px;
+  padding: 24px 28px;
+}
+
+.type-role-meta {
+  margin-bottom: 16px;
+}
+
+.type-spec {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
+
+.type-sample-khand {
+  font-family: var(--font-display);
+  color: var(--color-text);
+}
+
+.type-sample-hind {
+  font-family: var(--font-body);
+  color: var(--color-text);
+}
+
+.type-display-sample {
+  font-size: var(--text-display);
+  line-height: var(--lh-tight);
+}
+
+.type-headline-sample {
+  font-size: var(--text-headline);
+  line-height: var(--lh-tight);
+}
+
+.type-title-sample {
+  font-size: var(--text-title);
+  line-height: var(--lh-snug);
+}
+
+.type-body-sample {
+  font-size: var(--text-body);
+  line-height: var(--lh-body);
+  max-width: 72ch;
+}
+
+.type-label-sample {
+  font-size: var(--text-label);
+  line-height: 1.4;
+}
+
+.type-legal-sample {
+  font-size: var(--text-legal);
+  line-height: 1.4;
+}
+
+.type-context-board {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 22px;
+  padding: 32px;
+  margin-top: var(--space-4);
+}
+
+.context-eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+  margin-bottom: 14px;
+}
+
+.context-display {
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 6vw, 4.8rem);
+  line-height: var(--lh-tight);
+  margin-bottom: 16px;
+}
+
+.context-headline {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  line-height: var(--lh-snug);
+  margin-bottom: 16px;
+}
+
+.context-body {
+  font-family: var(--font-body);
+  max-width: 68ch;
+  color: var(--color-text);
+  margin-bottom: 24px;
+}
+
+.context-label-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.context-label-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-body);
+  min-height: 34px;
+  padding: 0 14px;
+  border-radius: 999px;
+  background: var(--color-secondary);
+  color: #ffffff;
+  font-size: var(--text-label);
+  line-height: 1;
+}
+
+.context-label-chip.muted {
+  background: #dfe6da;
+  color: var(--color-text);
+}
+
+.context-label-chip.accent {
+  background: var(--color-accent);
+  color: #ffffff;
+}
+
+@media (max-width: 1024px) {
+  .type-pairing-board {
+    grid-template-columns: 1fr;
+  }
+
+  .type-context-board {
+    padding: 24px;
+  }
+}
 
 .type-sample {
   background: var(--color-surface);
@@ -1504,6 +1708,7 @@ h3 {
 }
 
 .callout-dot {
+  font-family: var(--font-body);
   width: 54px;
   height: 54px;
   border-radius: 999px;
@@ -1715,6 +1920,7 @@ h3 {
 
 .table-like th,
 .table-like td {
+  font-family: var(--font-body);
   text-align: left;
   padding: 0.85rem 1rem;
   border-bottom: 1px solid var(--color-border);
@@ -1724,6 +1930,13 @@ h3 {
 
 .table-like th {
   font-weight: 600;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: var(--font-body);
 }
 
 .back-link {

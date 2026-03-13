@@ -4,9 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Typography — Luca Sabelli Design System</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
@@ -44,61 +41,180 @@
         <p class="eyebrow">Foundation 06</p>
         <h1>Typography</h1>
         <p class="page-intro">
-          Typography creates hierarchy through size, weight, spacing, and rhythm.
-          This system uses a clear set of role-based text styles: display, headline,
-          title, body, label, and legal.
+          Typography shapes hierarchy, rhythm, and readability across the interface.
+          This design system uses a two-font pairing: Khand for titles and display
+          text, and Hind for body text and supporting interface copy. The pairing
+          creates a strong contrast between expressive headings and highly readable
+          paragraphs, labels, and documentation text.
         </p>
       </header>
 
       <section class="content-section">
-        <h2>Type roles</h2>
+        <h2>Font pairing</h2>
+        <p class="page-intro">
+          The system uses one display family and one reading family. Limiting the
+          palette to two fonts keeps the interface coherent while still creating a
+          clear hierarchy between expressive titles and functional text.
+        </p>
 
-        <div class="type-sample">
-          <p class="label">Display</p>
-          <div class="type-display">Design Systems Shape Experience</div>
+        <div class="type-pairing-board">
+          <article class="type-pair-card">
+            <p class="label">Display / Titles</p>
+            <h3 class="font-demo-khand">Khand Bold</h3>
+            <p class="font-meta">Used for display, headline, and title roles.</p>
+          </article>
+
+          <article class="type-pair-card">
+            <p class="label">Body / Interface</p>
+            <div class="font-demo-hind">Hind Regular</div>
+            <p class="font-meta">Used for body copy, labels, legal text, and UI descriptions.</p>
+          </article>
         </div>
+      </section>
 
-        <div class="type-sample">
-          <p class="label">Headline</p>
-          <div class="type-headline">Foundation pages define the visual language</div>
+      <section class="content-section">
+        <h2>Type scale</h2>
+        <p class="page-intro">
+          The type system is organized into role-based styles. Display and headline
+          sizes scale responsively with the viewport, while body and label roles stay
+          tighter and more controlled for consistent reading and interface behavior.
+        </p>
+
+        <div class="type-scale-stack">
+          <article class="type-role-card">
+            <div class="type-role-meta">
+              <p class="label">Display</p>
+              <p class="type-spec">Khand Bold · clamp(3rem, 6vw, 5.5rem)</p>
+            </div>
+            <div class="type-sample-khand type-display-sample">Design systems shape experience</div>
+          </article>
+
+          <article class="type-role-card">
+            <div class="type-role-meta">
+              <p class="label">Headline</p>
+              <p class="type-spec">Khand Bold · clamp(2.25rem, 4vw, 3.5rem)</p>
+            </div>
+            <div class="type-sample-khand type-headline-sample">Typography creates structure and emphasis</div>
+          </article>
+
+          <article class="type-role-card">
+            <div class="type-role-meta">
+              <p class="label">Title</p>
+              <p class="type-spec">Khand Bold · 2rem</p>
+            </div>
+            <div class="type-sample-khand type-title-sample">Titles guide the reader through the page</div>
+          </article>
+
+          <article class="type-role-card">
+            <div class="type-role-meta">
+              <p class="label">Body</p>
+              <p class="type-spec">Hind Regular · 1.05rem / 1.65</p>
+            </div>
+            <div class="type-sample-hind type-body-sample">
+              Body text is designed for longer reading. It should remain readable,
+              calm, and visually stable across documentation pages, interface copy,
+              and project descriptions.
+            </div>
+          </article>
+
+          <article class="type-role-card">
+            <div class="type-role-meta">
+              <p class="label">Label</p>
+              <p class="type-spec">Hind Regular · 0.875rem / 1.4</p>
+            </div>
+            <div class="type-sample-hind type-label-sample">
+              Interface label, metadata, small heading
+            </div>
+          </article>
+
+          <article class="type-role-card">
+            <div class="type-role-meta">
+              <p class="label">Legal</p>
+              <p class="type-spec">Hind Regular · 0.75rem / 1.4</p>
+            </div>
+            <div class="type-sample-hind type-legal-sample">
+              Small print, footnotes, low-priority system text
+            </div>
+          </article>
         </div>
+      </section>
 
-        <div class="type-sample">
-          <p class="label">Title</p>
-          <div class="type-title">Typography organizes content into readable layers.</div>
-        </div>
+      <section class="content-section">
+        <h2>Hierarchy in context</h2>
+        <p class="page-intro">
+          The example below shows how the type roles work together in a real layout:
+          a display title establishes the page, a headline introduces the section,
+          and body text provides readable supporting content.
+        </p>
 
-        <div class="type-sample">
-          <p class="label">Body</p>
-          <div class="type-body">
-            Body text is used for longer explanations, contextual descriptions, and
-            content throughout the design system documentation.
+        <div class="type-context-board">
+          <p class="context-eyebrow">Portfolio system</p>
+          <h2 class="context-display">Design language for clarity and atmosphere</h2>
+          <h3 class="context-headline">Khand creates emphasis. Hind carries the reading load.</h3>
+          <p class="context-body">
+            This pairing supports a visual language that feels structured and
+            cinematic without sacrificing readability. Titles become expressive,
+            while paragraphs and interface text remain stable and easy to scan.
+          </p>
+
+          <div class="context-label-row">
+            <span class="context-label-chip">Label</span>
+            <span class="context-label-chip muted">Metadata</span>
+            <span class="context-label-chip accent">Action</span>
           </div>
         </div>
+      </section>
 
-        <div class="type-sample">
-          <p class="label">Label</p>
-          <div class="type-label">Used for small interface labels and metadata.</div>
-        </div>
-
-        <div class="type-sample">
-          <p class="label">Legal</p>
-          <div class="type-legal">Used for notes, captions, and small system text.</div>
-        </div>
+      <section class="content-section">
+        <h2>Typography principles</h2>
+        <table class="table-like">
+          <thead>
+            <tr>
+              <th>Principle</th>
+              <th>Rule</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Font pairing</td>
+              <td>Use only Khand Bold and Hind Regular to maintain consistency.</td>
+            </tr>
+            <tr>
+              <td>Hierarchy</td>
+              <td>Use Khand for titles and Hind for reading/interface text.</td>
+            </tr>
+            <tr>
+              <td>Readability</td>
+              <td>Keep body text at a comfortable line height and avoid overly long line lengths.</td>
+            </tr>
+            <tr>
+              <td>Responsiveness</td>
+              <td>Display and headline roles scale with viewport size; body roles remain more controlled.</td>
+            </tr>
+            <tr>
+              <td>Restraint</td>
+              <td>Avoid introducing extra font families or excessive weights.</td>
+            </tr>
+          </tbody>
+        </table>
       </section>
 
       <section class="content-section">
         <h2>CSS tokens</h2>
         <pre>:root {
-  --font-sans: "IBM Plex Sans", Arial, sans-serif;
-  --font-mono: "IBM Plex Mono", monospace;
+  --font-display: "Khand-Bold", sans-serif;
+  --font-body: "Hind-Regular", sans-serif;
 
-  --text-display: clamp(2.5rem, 5vw, 4.75rem);
-  --text-headline: clamp(2rem, 3vw, 3rem);
-  --text-title: 1.5rem;
-  --text-body: clamp(1.0625rem, 1rem + 0.28vw, 1.2rem);
-  --text-label: 0.95rem;
-  --text-legal: 0.8125rem;
+  --text-display: clamp(3rem, 6vw, 5.5rem);
+  --text-headline: clamp(2.25rem, 4vw, 3.5rem);
+  --text-title: 2rem;
+  --text-body: 1.05rem;
+  --text-label: 0.875rem;
+  --text-legal: 0.75rem;
+
+  --lh-tight: 1;
+  --lh-snug: 1.15;
+  --lh-body: 1.65;
 }</pre>
       </section>
     </main>
