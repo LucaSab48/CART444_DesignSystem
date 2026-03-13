@@ -470,24 +470,24 @@ h3 {
 }
 
 .callout-line.horizontal {
-  width: 76px;
+  width: 96px;
   height: 2px;
   background: #ff2d7a;
 }
 
 .callout-1 {
   top: 0;
-  left: 58px;
+  left: 16px;
 }
 
 .callout-2 {
   top: 0;
-  left: 62%;
+  left: 71.2%;
 }
 
 .callout-3 {
-  top: 250px;
-  right: 0;
+  top: 235px;
+  right: 92px;
   flex-direction: row;
   align-items: center;
 }
