@@ -36,6 +36,7 @@
 
     <main class="main-content">
       <section class="hero">
+        <p class="eyebrow">Overview</p>
         <h1>Design System</h1>
         <p class="lead">
           This design system is the scaffold for my portfolio website. It adopts
@@ -46,22 +47,117 @@
 
       <section class="content-section">
         <div class="section-header">
+          <p class="eyebrow">Guiding philosophy</p>
+          <h2>Structure, restraint, and media-first presentation</h2>
+        </div>
+
+        <div class="content-grid two-col">
+          <article class="card">
+            <h3>Structure</h3>
+            <p>
+              The system uses consistent grids, spacing, breakpoints, and layering
+              rules to create predictable layouts across the site. This structure
+              reduces visual noise and makes the interface easier to navigate,
+              document, and expand.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Restraint</h3>
+            <p>
+              The design language is intentionally limited. Typography, color,
+              iconography, and media treatments are controlled so that the work
+              itself remains the focus rather than being overwhelmed by decorative
+              interface choices.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Media-first presentation</h3>
+            <p>
+              My portfolio includes short films, video games, photography, and
+              design documentation. The system therefore supports multiple media
+              formats through flexible aspect ratios, modular layouts, and clear
+              typographic hierarchy.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Systematic consistency</h3>
+            <p>
+              The goal of this design system is not only visual consistency, but
+              also reusability. Foundations and components are documented with code
+              so they can be applied across future portfolio pages and expanded into
+              a larger component library.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <div class="section-header">
           <p class="eyebrow">Approach</p>
           <h2>Adopt, then adapt visually</h2>
         </div>
+
         <div class="content-grid two-col">
           <article class="card">
             <h3>What I adopted</h3>
             <p>
               A 12-column grid, an 8-point spacing system, responsive breakpoints,
-              layered hierarchy, and standardized typography roles.
+              layered hierarchy, and an outline-based icon approach. These
+              structural foundations are based on established design-system
+              conventions so the portfolio can remain scalable, coherent, and easy
+              to extend.
             </p>
           </article>
+
           <article class="card">
             <h3>What I adapted</h3>
             <p>
-              Typography choices, color palette, image treatment, icon tone, and
-              the overall mood of the interface to fit my creative practice.
+              Typography choices, color palette, image treatment, icon usage, and
+              the overall mood of the interface were adapted to reflect my creative
+              practice. The system supports a portfolio centered on film, games,
+              photography, and design work while keeping the interface controlled
+              and readable.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <div class="section-header">
+          <p class="eyebrow">References</p>
+          <h2>Reference systems and inspiration</h2>
+        </div>
+
+        <div class="content-grid two-col">
+          <article class="card">
+            <h3>Design systems studied</h3>
+            <p>
+              This design system was developed through the study of established
+              documentation systems and UI foundations. These references informed
+              the structure of the layout, hierarchy, tokens, and documentation
+              style used throughout this project.
+            </p>
+            <ul class="reference-list">
+              <li><a href="https://www.ibm.com/design/language/" target="_blank" rel="noopener noreferrer">IBM Design Language</a></li>
+              <li><a href="https://spectrum.adobe.com/" target="_blank" rel="noopener noreferrer">Adobe Spectrum</a></li>
+              <li><a href="https://m3.material.io/foundations" target="_blank" rel="noopener noreferrer">Google Material 3 Foundations</a></li>
+              <li><a href="https://www.goodbarber.com/uxdesign/foundations/" target="_blank" rel="noopener noreferrer">GoodBarber UX Foundations</a></li>
+              <li><a href="https://carbondesignsystem.com/" target="_blank" rel="noopener noreferrer">Carbon Design System</a></li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Why these references matter</h3>
+            <p>
+              IBM and Carbon informed the documentation layout and systematic
+              clarity of the site. GoodBarber was especially useful for defining
+              foundations such as grid, spacing, breakpoints, layering, color,
+              typography, aspect ratios, and icons. Material and Spectrum helped
+              reinforce the importance of role-based systems, consistency, and
+              scalable interface patterns.
             </p>
           </article>
         </div>
@@ -126,7 +222,7 @@
             <span class="foundation-number">07</span>
             <div>
               <h3>Image Aspect Ratios</h3>
-              <p>16:9, 4:3, 3:2, and 1:1 image systems.</p>
+              <p>16:9, 4:3, 3:2, 2:1, and 1:1 image systems.</p>
             </div>
           </a>
 
@@ -134,7 +230,7 @@
             <span class="foundation-number">08</span>
             <div>
               <h3>Icons</h3>
-              <p>Stroke-based icon guidelines and sizing rules.</p>
+              <p>Outline-based icon guidelines and usage rules.</p>
             </div>
           </a>
         </div>

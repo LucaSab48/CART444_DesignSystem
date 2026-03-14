@@ -2084,3 +2084,20 @@ select {
   }
 }
 
+.reference-list {
+  margin: 16px 0 0 0;
+  padding-left: 18px;
+}
+
+.reference-list li {
+  margin-bottom: 10px;
+}
+
+.reference-list a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.reference-list a:hover {
+  text-decoration: underline;
+}
