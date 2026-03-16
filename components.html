@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Components — Luca Sabelli Design System</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="site-shell">
+    <aside class="sidebar">
+      <div class="sidebar-inner">
+        <a class="brand" href="index.html">
+          <span class="brand-kicker">Luca Sabelli</span>
+          <span class="brand-title">Design System</span>
+        </a>
+
+        <nav class="nav-group">
+          <p class="nav-label">Overview</p>
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link active" href="components.html" aria-current="page">Components</a>
+        </nav>
+
+        <nav class="nav-group">
+          <p class="nav-label">Foundations</p>
+          <a class="nav-link" href="foundations/grid.html">Grid</a>
+          <a class="nav-link" href="foundations/spacing.html">Spacing</a>
+          <a class="nav-link" href="foundations/breakpoints.html">Breakpoints</a>
+          <a class="nav-link" href="foundations/layers.html">Layers</a>
+          <a class="nav-link" href="foundations/colors.html">Color</a>
+          <a class="nav-link" href="foundations/typography.html">Typography</a>
+          <a class="nav-link" href="foundations/aspect-ratios.html">Image Aspect Ratios</a>
+          <a class="nav-link" href="foundations/icons.html">Icons</a>
+        </nav>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <a class="back-link" href="index.html">← Back to home</a>
+
+      <header class="page-header">
+        <p class="eyebrow">Component Library</p>
+        <h1>Components</h1>
+        <p class="page-intro">
+          Components are reusable interface elements built from the foundations of
+          the design system. They translate tokens for color, typography, spacing,
+          layering, and iconography into practical UI patterns that can be reused
+          across the portfolio website.
+        </p>
+      </header>
+
+      <section class="content-section">
+        <h2>Button</h2>
+        <p class="page-intro">
+          Buttons are used for primary actions, navigation, and interactive calls
+          to action. The system supports default, hover, and disabled states.
+        </p>
+
+        <div class="component-demo-card">
+          <div class="component-preview-row">
+            <button class="ds-button">Primary button</button>
+            <button class="ds-button is-hover">Hover state</button>
+            <button class="ds-button is-disabled" disabled>Disabled</button>
+          </div>
+        </div>
+
+        <pre>&lt;button class="ds-button"&gt;Primary button&lt;/button&gt;
+&lt;button class="ds-button is-disabled" disabled&gt;Disabled&lt;/button&gt;</pre>
+      </section>
+
+      <section class="content-section">
+        <h2>Text input</h2>
+        <p class="page-intro">
+          Text inputs are used in forms and interface controls. The system defines
+          default, focus, and error states.
+        </p>
+
+        <div class="component-demo-card">
+          <div class="component-preview-stack">
+            <input class="ds-input" type="text" placeholder="Default input" />
+            <input class="ds-input is-focus" type="text" value="Focused input" />
+            <input class="ds-input is-error" type="text" value="Error state" />
+          </div>
+        </div>
+
+        <pre>&lt;input class="ds-input" type="text" placeholder="Default input" /&gt;
+&lt;input class="ds-input is-error" type="text" value="Error state" /&gt;</pre>
+      </section>
+
+      <section class="content-section">
+        <h2>Checkbox</h2>
+        <p class="page-intro">
+          Checkboxes allow users to select one or more options. The system supports
+          default, checked, and disabled states.
+        </p>
+
+        <div class="component-demo-card">
+          <div class="component-preview-stack">
+            <label class="ds-checkbox-row">
+              <input type="checkbox" class="ds-checkbox" />
+              <span>Unchecked option</span>
+            </label>
+
+            <label class="ds-checkbox-row">
+              <input type="checkbox" class="ds-checkbox" checked />
+              <span>Checked option</span>
+            </label>
+
+            <label class="ds-checkbox-row is-disabled">
+              <input type="checkbox" class="ds-checkbox" disabled />
+              <span>Disabled option</span>
+            </label>
+          </div>
+        </div>
+
+        <pre>&lt;label class="ds-checkbox-row"&gt;
+  &lt;input type="checkbox" class="ds-checkbox" /&gt;
+  &lt;span&gt;Unchecked option&lt;/span&gt;
+&lt;/label&gt;</pre>
+      </section>
+
+      <section class="content-section">
+        <h2>Dropdown</h2>
+        <p class="page-intro">
+          Dropdowns are used for category selection, filtering, and compact option
+          lists in the portfolio interface.
+        </p>
+
+        <div class="component-demo-card">
+          <div class="component-preview-row">
+            <select class="ds-select">
+              <option selected>Select category</option>
+              <option>Film</option>
+              <option>Game</option>
+              <option>Photography</option>
+              <option>Design</option>
+            </select>
+          </div>
+        </div>
+
+        <pre>&lt;select class="ds-select"&gt;
+  &lt;option selected&gt;Select category&lt;/option&gt;
+  &lt;option&gt;Film&lt;/option&gt;
+&lt;/select&gt;</pre>
+      </section>
+
+      <section class="content-section">
+        <h2>Card</h2>
+        <p class="page-intro">
+          Cards are containment components used to group related content. They are
+          used throughout the system for foundations, references, and structured
+          information blocks.
+        </p>
+
+        <div class="component-demo-card">
+          <article class="ds-card">
+            <p class="label">Card</p>
+            <h3>Structured content container</h3>
+            <p>
+              Cards group content into readable blocks with consistent padding,
+              border treatment, and surface hierarchy.
+            </p>
+          </article>
+        </div>
+
+        <pre>&lt;article class="ds-card"&gt;
+  &lt;p class="label"&gt;Card&lt;/p&gt;
+  &lt;h3&gt;Structured content container&lt;/h3&gt;
+  &lt;p&gt;Cards group content into readable blocks.&lt;/p&gt;
+&lt;/article&gt;</pre>
+      </section>
+
+      <section class="content-section">
+        <h2>Media card</h2>
+        <p class="page-intro">
+          Media cards are used for project thumbnails and portfolio previews. They
+          combine image ratios, typography, and metadata into a reusable pattern.
+        </p>
+
+        <div class="component-demo-card">
+          <article class="ds-media-card">
+            <div class="ds-media-thumb ratio-16-9">
+              <div class="ds-media-placeholder">
+                <span>16:9</span>
+                <small>Project preview</small>
+              </div>
+            </div>
+            <div class="ds-media-body">
+              <p class="label">Short film</p>
+              <h3>Project title</h3>
+              <p>
+                A reusable media card for portfolio entries, thumbnails, and
+                featured projects.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <pre>&lt;article class="ds-media-card"&gt;
+  &lt;div class="ds-media-thumb ratio-16-9"&gt;&lt;/div&gt;
+  &lt;div class="ds-media-body"&gt;
+    &lt;p class="label"&gt;Short film&lt;/p&gt;
+    &lt;h3&gt;Project title&lt;/h3&gt;
+  &lt;/div&gt;
+&lt;/article&gt;</pre>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
