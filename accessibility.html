@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Accessibility - Luca Sabelli Design System</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="site-shell">
+    <aside class="sidebar">
+      <div class="sidebar-inner">
+        <a class="brand" href="index.html">
+          <span class="brand-kicker">Luca Sabelli</span>
+          <span class="brand-title">Design System</span>
+        </a>
+
+        <nav class="nav-group">
+          <p class="nav-label">Overview</p>
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="components.html">Components</a>
+          <a class="nav-link active" href="accessibility.html" aria-current="page">Accessibility</a>
+        </nav>
+
+        <nav class="nav-group">
+          <p class="nav-label">Foundations</p>
+          <a class="nav-link" href="foundations/grid.html">Grid</a>
+          <a class="nav-link" href="foundations/spacing.html">Spacing</a>
+          <a class="nav-link" href="foundations/breakpoints.html">Breakpoints</a>
+          <a class="nav-link" href="foundations/layers.html">Layers</a>
+          <a class="nav-link" href="foundations/colors.html">Color</a>
+          <a class="nav-link" href="foundations/typography.html">Typography</a>
+          <a class="nav-link" href="foundations/aspect-ratios.html">Image Aspect Ratios</a>
+          <a class="nav-link" href="foundations/icons.html">Icons</a>
+        </nav>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <a class="back-link" href="index.html">&larr; Back to home</a>
+
+      <header class="page-header">
+        <p class="eyebrow">Documentation</p>
+        <h1>Accessibility</h1>
+        <p class="page-intro">
+          Accessibility is treated as a system requirement rather than a later
+          compliance pass. The aim is to approach WCAG 2.1 AA expectations where
+          applicable while keeping the interface restrained, readable, and usable
+          across keyboard, screen-reader, and low-vision contexts.
+        </p>
+      </header>
+
+      <section class="content-section">
+        <div class="accessibility-grid three-col">
+          <article class="accessibility-card">
+            <p class="label">Contrast</p>
+            <p class="a11y-stat">AA</p>
+            <p>Body text should meet at least 4.5:1 contrast, while larger display text should remain at or above 3:1.</p>
+          </article>
+          <article class="accessibility-card">
+            <p class="label">Focus</p>
+            <p class="a11y-stat">Visible</p>
+            <p>Interactive elements use a high-visibility focus ring that stays consistent across navigation, forms, and components.</p>
+          </article>
+          <article class="accessibility-card">
+            <p class="label">Input labels</p>
+            <p class="a11y-stat">Always</p>
+            <p>Form fields use visible labels, with helper and error text placed close to the field they describe.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <div class="section-header">
+          <p class="eyebrow">Principles</p>
+          <h2>System expectations</h2>
+        </div>
+
+        <div class="doc-grid">
+          <article class="doc-card">
+            <h3>Contrast expectations</h3>
+            <ul class="guideline-list">
+              <li>Use dark text on the light background and white surface by default for reading content.</li>
+              <li>Reserve the orange accent for actions and highlights instead of long passages of text.</li>
+              <li>Test new combinations against WCAG 2.1 AA before adding them to the system.</li>
+            </ul>
+          </article>
+          <article class="doc-card">
+            <h3>Keyboard navigation</h3>
+            <ul class="guideline-list">
+              <li>All controls must be reachable and operable with `Tab`, `Shift + Tab`, `Enter`, and `Space` where expected.</li>
+              <li>Dialogs should move focus into the modal when opened and return focus after closing.</li>
+              <li>Do not remove browser keyboard behavior from native controls.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <div class="section-header">
+          <p class="eyebrow">Focus</p>
+          <h2>Visible focus styles</h2>
+        </div>
+
+        <div class="component-grid">
+          <article class="component-preview-panel">
+            <p class="label">Button focus</p>
+            <button class="ds-button is-focus" type="button">Focused button</button>
+          </article>
+          <article class="component-preview-panel">
+            <p class="label">Field focus</p>
+            <label class="field-row">
+              <span class="field-label">Focused input</span>
+              <input class="ds-input is-focus" type="text" value="Keyboard focus" />
+            </label>
+          </article>
+        </div>
+
+        <div class="doc-grid">
+          <article class="doc-card">
+            <h3>Focus guidance</h3>
+            <ul class="guideline-list">
+              <li>Focus must remain visible at all times and should not rely only on color changes inside the component.</li>
+              <li>Use one consistent ring treatment so the system feels coherent across controls.</li>
+              <li>Hover and focus should not be identical if that reduces keyboard clarity.</li>
+            </ul>
+          </article>
+          <article class="doc-card">
+            <h3>Token reference</h3>
+            <div class="a11y-chip-row">
+              <span class="a11y-chip"><code>--focus-ring</code></span>
+              <span class="a11y-chip"><code>--focus-ring-accent</code></span>
+              <span class="a11y-chip"><code>outline-offset</code></span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <div class="section-header">
+          <p class="eyebrow">Semantics</p>
+          <h2>HTML and labels</h2>
+        </div>
+
+        <div class="doc-grid">
+          <article class="doc-card">
+            <h3>Semantic HTML</h3>
+            <ul class="guideline-list">
+              <li>Use headings in order so screen-reader users can scan the page structure.</li>
+              <li>Use `<button>` for actions, `<a>` for navigation, and native form controls where possible.</li>
+              <li>Use `fieldset` and `legend` for related checkboxes or radios.</li>
+            </ul>
+          </article>
+          <article class="doc-card">
+            <h3>Labels for form inputs</h3>
+            <ul class="guideline-list">
+              <li>Do not depend on placeholder text as the only label.</li>
+              <li>Keep labels visible even when helper text is also present.</li>
+              <li>Connect helper and error messages with `aria-describedby` when they clarify the field state.</li>
+            </ul>
+          </article>
+        </div>
+
+        <pre class="component-code">&lt;label class="field-row"&gt;
+  &lt;span class="field-label"&gt;Email&lt;/span&gt;
+  &lt;input class="ds-input" type="email" aria-describedby="email-help" /&gt;
+  &lt;span class="helper-text" id="email-help"&gt;Used only for project contact.&lt;/span&gt;
+&lt;/label&gt;</pre>
+      </section>
+
+      <section class="content-section">
+        <div class="section-header">
+          <p class="eyebrow">ARIA</p>
+          <h2>Use ARIA only where needed</h2>
+        </div>
+
+        <div class="doc-grid">
+          <article class="doc-card">
+            <h3>Good ARIA use</h3>
+            <ul class="guideline-list">
+              <li>Dialogs use <code>role="dialog"</code> and <code>aria-modal="true"</code>.</li>
+              <li>Switches use <code>role="switch"</code> and <code>aria-checked</code>.</li>
+              <li>Tooltips use <code>role="tooltip"</code> and connect to a trigger with <code>aria-describedby</code>.</li>
+            </ul>
+          </article>
+          <article class="doc-card">
+            <h3>Avoid overusing ARIA</h3>
+            <ul class="guideline-list">
+              <li>Prefer native elements before recreating behavior with custom roles.</li>
+              <li>Do not add ARIA if native HTML already provides the needed semantics.</li>
+              <li>ARIA should reinforce meaning, not patch unclear structure.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <div class="section-header">
+          <p class="eyebrow">Icons</p>
+          <h2>Decorative vs meaningful icons</h2>
+        </div>
+
+        <div class="doc-grid">
+          <article class="doc-card">
+            <h3>Decorative icons</h3>
+            <ul class="guideline-list">
+              <li>Hide purely decorative icons from assistive technology with <code>aria-hidden="true"</code>.</li>
+              <li>Do not let visual ornament become extra screen-reader noise.</li>
+            </ul>
+          </article>
+          <article class="doc-card">
+            <h3>Meaningful icons</h3>
+            <ul class="guideline-list">
+              <li>If an icon communicates status or function, provide text or an accessible label.</li>
+              <li>Do not use icon-only buttons without an accessible name.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/site.js"></script>
+</body>
+</html>

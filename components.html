@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Components — Luca Sabelli Design System</title>
+  <title>Components - Luca Sabelli Design System</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -19,6 +19,7 @@
           <p class="nav-label">Overview</p>
           <a class="nav-link" href="index.html">Home</a>
           <a class="nav-link active" href="components.html" aria-current="page">Components</a>
+          <a class="nav-link" href="accessibility.html">Accessibility</a>
         </nav>
 
         <nav class="nav-group">
@@ -36,175 +37,849 @@
     </aside>
 
     <main class="main-content">
-      <a class="back-link" href="index.html">← Back to home</a>
+      <a class="back-link" href="index.html">&larr; Back to home</a>
 
       <header class="page-header">
         <p class="eyebrow">Component Library</p>
         <h1>Components</h1>
         <p class="page-intro">
-          Components are reusable interface elements built from the foundations of
-          the design system. They translate tokens for color, typography, spacing,
-          layering, and iconography into practical UI patterns that can be reused
-          across the portfolio website.
+          Components translate the foundations into repeatable interface patterns for
+          portfolio pages, project filters, forms, and content modules. The emphasis
+          is on restrained styling, clear interaction states, and documentation that
+          can support reuse instead of one-off mockups.
         </p>
       </header>
 
       <section class="content-section">
-        <h2>Button</h2>
-        <p class="page-intro">
-          Buttons are used for primary actions, navigation, and interactive calls
-          to action. The system supports default, hover, and disabled states.
-        </p>
+        <div class="overview-grid">
+          <article class="doc-card">
+            <p class="label">Coverage</p>
+            <h2>System goals for components</h2>
+            <ul class="priority-list">
+              <li>Every core component documents default, hover, focus, active, disabled, or error states where relevant.</li>
+              <li>Each pattern includes usage guidance, anatomy, accessibility notes, and starter code.</li>
+              <li>Component styling is tied back to shared tokens for spacing, radius, color, and focus treatment.</li>
+            </ul>
+          </article>
 
-        <div class="component-demo-card">
-          <div class="component-preview-row">
-            <button class="ds-button">Primary button</button>
-            <button class="ds-button is-hover">Hover state</button>
-            <button class="ds-button is-disabled" disabled>Disabled</button>
-          </div>
+          <article class="component-index">
+            <p class="label">Index</p>
+            <h2>Included patterns</h2>
+            <ul class="component-nav-list">
+              <li><a href="#button">Button</a></li>
+              <li><a href="#text-input">Text input</a></li>
+              <li><a href="#checkbox-radio">Checkbox and radio</a></li>
+              <li><a href="#toggle">Toggle</a></li>
+              <li><a href="#dropdown">Dropdown</a></li>
+              <li><a href="#cards">Cards and thumbnail</a></li>
+              <li><a href="#alert">Alert</a></li>
+              <li><a href="#tooltip">Tooltip</a></li>
+              <li><a href="#progress">Progress</a></li>
+              <li><a href="#dialog">Dialog</a></li>
+              <li><a href="#form">Form</a></li>
+            </ul>
+          </article>
         </div>
-
-        <pre>&lt;button class="ds-button"&gt;Primary button&lt;/button&gt;
-&lt;button class="ds-button is-disabled" disabled&gt;Disabled&lt;/button&gt;</pre>
       </section>
 
-      <section class="content-section">
-        <h2>Text input</h2>
-        <p class="page-intro">
-          Text inputs are used in forms and interface controls. The system defines
-          default, focus, and error states.
-        </p>
-
-        <div class="component-demo-card">
-          <div class="component-preview-stack">
-            <input class="ds-input" type="text" placeholder="Default input" />
-            <input class="ds-input is-focus" type="text" value="Focused input" />
-            <input class="ds-input is-error" type="text" value="Error state" />
-          </div>
+      <section class="content-section" id="button">
+        <div class="section-header">
+          <p class="eyebrow">01</p>
+          <h2>Button</h2>
+          <p class="page-intro">
+            Buttons trigger a single clear action. The primary orange button is used
+            sparingly for high-priority actions, while a quieter secondary style
+            supports cancel, view, and supporting actions.
+          </p>
         </div>
 
-        <pre>&lt;input class="ds-input" type="text" placeholder="Default input" /&gt;
-&lt;input class="ds-input is-error" type="text" value="Error state" /&gt;</pre>
+        <div class="component-layout">
+          <article class="component-preview-panel">
+            <div class="component-showcase">
+              <div class="component-preview-row">
+                <button class="ds-button">Default</button>
+                <button class="ds-button is-hover" type="button">Hover</button>
+                <button class="ds-button is-focus" type="button">Focus</button>
+                <button class="ds-button is-active" type="button">Pressed</button>
+                <button class="ds-button" type="button" disabled>Disabled</button>
+              </div>
+              <div class="component-preview-row">
+                <button class="ds-button is-secondary" type="button">Secondary</button>
+                <button class="ds-button is-secondary is-hover" type="button">Secondary hover</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="component-doc-panel">
+            <div class="doc-grid">
+              <article class="doc-card">
+                <p class="label">Use it for</p>
+                <ul class="guideline-list">
+                  <li>Submitting a form or confirming an action.</li>
+                  <li>Navigating to a primary destination such as a featured project.</li>
+                </ul>
+              </article>
+              <article class="doc-card">
+                <p class="label">Avoid when</p>
+                <ul class="guideline-list">
+                  <li>A text link is sufficient.</li>
+                  <li>Several actions are competing for equal importance.</li>
+                </ul>
+              </article>
+            </div>
+            <p><strong>Anatomy:</strong> container, text label, optional icon, state treatment, focus ring.</p>
+            <p><strong>Accessibility:</strong> use a real <code>&lt;button&gt;</code> for in-page actions, keep labels action-oriented, and preserve visible focus on both mouse-free and keyboard flows.</p>
+          </article>
+        </div>
+
+        <div class="state-grid">
+          <article class="state-card">
+            <div class="state-preview"><button class="ds-button" type="button">Default</button></div>
+            <h3>Default</h3>
+            <p>Resting state with the accent fill reserved for the most important action in a region.</p>
+          </article>
+          <article class="state-card">
+            <div class="state-preview"><button class="ds-button is-hover" type="button">Hover</button></div>
+            <h3>Hover and focus</h3>
+            <p>Hover lifts slightly while focus swaps motion for a clear ring so keyboard navigation stays visible.</p>
+          </article>
+          <article class="state-card">
+            <div class="state-preview"><button class="ds-button is-active" type="button">Pressed</button></div>
+            <h3>Active</h3>
+            <p>Pressed state darkens slightly and removes the lift to communicate click confirmation.</p>
+          </article>
+          <article class="state-card">
+            <div class="state-preview"><button class="ds-button" type="button" disabled>Disabled</button></div>
+            <h3>Disabled</h3>
+            <p>Use only when the action is temporarily unavailable and the reason is communicated elsewhere.</p>
+          </article>
+        </div>
+
+        <pre class="component-code">&lt;button class="ds-button" type="button"&gt;Primary action&lt;/button&gt;
+&lt;button class="ds-button is-secondary" type="button"&gt;Secondary action&lt;/button&gt;</pre>
       </section>
 
-      <section class="content-section">
-        <h2>Checkbox</h2>
-        <p class="page-intro">
-          Checkboxes allow users to select one or more options. The system supports
-          default, checked, and disabled states.
-        </p>
-
-        <div class="component-demo-card">
-          <div class="component-preview-stack">
-            <label class="ds-checkbox-row">
-              <input type="checkbox" class="ds-checkbox" />
-              <span>Unchecked option</span>
-            </label>
-
-            <label class="ds-checkbox-row">
-              <input type="checkbox" class="ds-checkbox" checked />
-              <span>Checked option</span>
-            </label>
-
-            <label class="ds-checkbox-row is-disabled">
-              <input type="checkbox" class="ds-checkbox" disabled />
-              <span>Disabled option</span>
-            </label>
-          </div>
+      <section class="content-section" id="text-input">
+        <div class="section-header">
+          <p class="eyebrow">02</p>
+          <h2>Text Input</h2>
+          <p class="page-intro">
+            Text inputs support contact forms, project metadata entry, and filter
+            interfaces. Labels stay outside the field, helper text sits below, and
+            error feedback appears inline.
+          </p>
         </div>
 
-        <pre>&lt;label class="ds-checkbox-row"&gt;
-  &lt;input type="checkbox" class="ds-checkbox" /&gt;
-  &lt;span&gt;Unchecked option&lt;/span&gt;
+        <div class="component-layout">
+          <article class="component-preview-panel">
+            <div class="component-showcase compact">
+              <label class="field-row">
+                <span class="field-label">Default</span>
+                <input class="ds-input" type="text" placeholder="Project title" />
+                <span class="helper-text">Use sentence case and keep labels concise.</span>
+              </label>
+              <label class="field-row">
+                <span class="field-label">Hover</span>
+                <input class="ds-input is-hover" type="text" value="Hovered field" />
+              </label>
+              <label class="field-row">
+                <span class="field-label">Focus</span>
+                <input class="ds-input is-focus" type="text" value="Focused field" />
+              </label>
+              <label class="field-row">
+                <span class="field-label">Error</span>
+                <input class="ds-input is-error" type="email" value="name@" aria-invalid="true" aria-describedby="email-error" />
+                <span class="helper-text error" id="email-error">Enter a complete email address.</span>
+              </label>
+              <label class="field-row">
+                <span class="field-label">Disabled</span>
+                <input class="ds-input" type="text" value="Unavailable field" disabled />
+              </label>
+            </div>
+          </article>
+
+          <article class="component-doc-panel">
+            <div class="doc-grid">
+              <article class="doc-card">
+                <p class="label">Use it for</p>
+                <ul class="guideline-list">
+                  <li>Short responses such as names, links, tags, or categories.</li>
+                  <li>Structured form fields that need labels, validation, and helper text.</li>
+                </ul>
+              </article>
+              <article class="doc-card">
+                <p class="label">Avoid when</p>
+                <ul class="guideline-list">
+                  <li>Users need to choose from fixed options.</li>
+                  <li>The response is multi-line, which should use a textarea.</li>
+                </ul>
+              </article>
+            </div>
+            <p><strong>Anatomy:</strong> label, optional metadata, field container, input value, helper or error message.</p>
+            <p><strong>Accessibility:</strong> every input needs a visible label, <code>aria-invalid</code> when in error, and helper text associated with <code>aria-describedby</code> where useful.</p>
+          </article>
+        </div>
+
+        <pre class="component-code">&lt;label class="field-row"&gt;
+  &lt;span class="field-label"&gt;Email&lt;/span&gt;
+  &lt;input class="ds-input is-error" type="email" aria-invalid="true" aria-describedby="email-error" /&gt;
+  &lt;span class="helper-text error" id="email-error"&gt;Enter a complete email address.&lt;/span&gt;
 &lt;/label&gt;</pre>
       </section>
 
-      <section class="content-section">
-        <h2>Dropdown</h2>
-        <p class="page-intro">
-          Dropdowns are used for category selection, filtering, and compact option
-          lists in the portfolio interface.
-        </p>
-
-        <div class="component-demo-card">
-          <div class="component-preview-row">
-            <select class="ds-select">
-              <option selected>Select category</option>
-              <option>Film</option>
-              <option>Game</option>
-              <option>Photography</option>
-              <option>Design</option>
-            </select>
-          </div>
+      <section class="content-section" id="checkbox-radio">
+        <div class="section-header">
+          <p class="eyebrow">03</p>
+          <h2>Checkbox and Radio</h2>
+          <p class="page-intro">
+            Checkboxes support multi-select preferences and radios support a single
+            required choice. Both are documented as labeled choice groups rather
+            than standalone inputs.
+          </p>
         </div>
 
-        <pre>&lt;select class="ds-select"&gt;
-  &lt;option selected&gt;Select category&lt;/option&gt;
-  &lt;option&gt;Film&lt;/option&gt;
-&lt;/select&gt;</pre>
-      </section>
+        <div class="component-layout">
+          <article class="component-preview-panel">
+            <div class="component-showcase">
+              <div class="control-stack">
+                <span class="control-label">Checkbox group</span>
+                <div class="choice-group">
+                  <label class="choice-row">
+                    <input type="checkbox" checked />
+                    <span>Include motion studies</span>
+                  </label>
+                  <label class="choice-row">
+                    <input type="checkbox" />
+                    <span>Include process images</span>
+                  </label>
+                  <label class="choice-row is-disabled">
+                    <input type="checkbox" disabled />
+                    <span>Archive draft version</span>
+                  </label>
+                </div>
+              </div>
 
-      <section class="content-section">
-        <h2>Card</h2>
-        <p class="page-intro">
-          Cards are containment components used to group related content. They are
-          used throughout the system for foundations, references, and structured
-          information blocks.
-        </p>
-
-        <div class="component-demo-card">
-          <article class="ds-card">
-            <p class="label">Card</p>
-            <h3>Structured content container</h3>
-            <p>
-              Cards group content into readable blocks with consistent padding,
-              border treatment, and surface hierarchy.
-            </p>
-          </article>
-        </div>
-
-        <pre>&lt;article class="ds-card"&gt;
-  &lt;p class="label"&gt;Card&lt;/p&gt;
-  &lt;h3&gt;Structured content container&lt;/h3&gt;
-  &lt;p&gt;Cards group content into readable blocks.&lt;/p&gt;
-&lt;/article&gt;</pre>
-      </section>
-
-      <section class="content-section">
-        <h2>Media card</h2>
-        <p class="page-intro">
-          Media cards are used for project thumbnails and portfolio previews. They
-          combine image ratios, typography, and metadata into a reusable pattern.
-        </p>
-
-        <div class="component-demo-card">
-          <article class="ds-media-card">
-            <div class="ds-media-thumb ratio-16-9">
-              <div class="ds-media-placeholder">
-                <span>16:9</span>
-                <small>Project preview</small>
+              <div class="control-stack">
+                <span class="control-label">Radio group</span>
+                <div class="choice-group" role="radiogroup" aria-label="Project format">
+                  <label class="choice-row">
+                    <input type="radio" name="format" checked />
+                    <span>Featured project</span>
+                  </label>
+                  <label class="choice-row">
+                    <input type="radio" name="format" />
+                    <span>Standard project</span>
+                  </label>
+                  <label class="choice-row is-error">
+                    <input type="radio" name="format-error" />
+                    <span>Error example</span>
+                  </label>
+                </div>
+                <p class="helper-text error">Show an error only when a required selection has not been made.</p>
               </div>
             </div>
-            <div class="ds-media-body">
-              <p class="label">Short film</p>
-              <h3>Project title</h3>
-              <p>
-                A reusable media card for portfolio entries, thumbnails, and
-                featured projects.
-              </p>
+          </article>
+
+          <article class="component-doc-panel">
+            <div class="doc-grid">
+              <article class="doc-card">
+                <p class="label">Use it for</p>
+                <ul class="guideline-list">
+                  <li>Checkboxes for multiple independent selections.</li>
+                  <li>Radios for one mutually exclusive answer.</li>
+                </ul>
+              </article>
+              <article class="doc-card">
+                <p class="label">Avoid when</p>
+                <ul class="guideline-list">
+                  <li>The option count is long enough to require filtering or search.</li>
+                  <li>A binary preference would be clearer as a toggle.</li>
+                </ul>
+              </article>
             </div>
+            <p><strong>Anatomy:</strong> group label, control, text label, optional helper or error message.</p>
+            <p><strong>Accessibility:</strong> keep the touch target on the label, group related radios with <code>&lt;fieldset&gt;</code> or <code>role="radiogroup"</code>, and never rely on color alone to show checked or invalid state.</p>
           </article>
         </div>
 
-        <pre>&lt;article class="ds-media-card"&gt;
-  &lt;div class="ds-media-thumb ratio-16-9"&gt;&lt;/div&gt;
+        <pre class="component-code">&lt;label class="choice-row"&gt;
+  &lt;input type="radio" name="project-type" /&gt;
+  &lt;span&gt;Featured project&lt;/span&gt;
+&lt;/label&gt;</pre>
+      </section>
+
+      <section class="content-section" id="toggle">
+        <div class="section-header">
+          <p class="eyebrow">04</p>
+          <h2>Toggle / Switch</h2>
+          <p class="page-intro">
+            Toggles represent an immediate on or off setting, such as enabling
+            captions or revealing additional metadata.
+          </p>
+        </div>
+
+        <div class="component-layout">
+          <article class="component-preview-panel">
+            <div class="component-showcase compact">
+              <div class="switch-row">
+                <button class="ds-switch" type="button" role="switch" aria-checked="false" aria-label="Enable captions"></button>
+                <span>Default</span>
+              </div>
+              <div class="switch-row">
+                <button class="ds-switch is-hover" type="button" role="switch" aria-checked="false" aria-label="Preview hover state"></button>
+                <span>Hover</span>
+              </div>
+              <div class="switch-row">
+                <button class="ds-switch is-focus" type="button" role="switch" aria-checked="false" aria-label="Preview focus state"></button>
+                <span>Focus</span>
+              </div>
+              <div class="switch-row">
+                <button class="ds-switch is-active" type="button" role="switch" aria-checked="true" aria-label="Enable captions"></button>
+                <span>On</span>
+              </div>
+              <div class="switch-row">
+                <button class="ds-switch" type="button" role="switch" aria-checked="false" aria-label="Unavailable switch" disabled></button>
+                <span>Disabled</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="component-doc-panel">
+            <div class="doc-grid">
+              <article class="doc-card">
+                <p class="label">Use it for</p>
+                <ul class="guideline-list">
+                  <li>Binary settings that take effect immediately.</li>
+                  <li>Preferences that benefit from seeing on and off states at a glance.</li>
+                </ul>
+              </article>
+              <article class="doc-card">
+                <p class="label">Avoid when</p>
+                <ul class="guideline-list">
+                  <li>The user must confirm the action later with a submit button.</li>
+                  <li>The choice is not truly binary.</li>
+                </ul>
+              </article>
+            </div>
+            <p><strong>Anatomy:</strong> switch track, thumb, state label, and accessible name.</p>
+            <p><strong>Accessibility:</strong> use <code>role="switch"</code> with <code>aria-checked</code>, ensure the label explains the setting, and do not use the toggle alone to communicate critical status changes.</p>
+          </article>
+        </div>
+
+        <pre class="component-code">&lt;button class="ds-switch" type="button" role="switch" aria-checked="false" aria-label="Enable captions"&gt;&lt;/button&gt;</pre>
+      </section>
+
+      <section class="content-section" id="dropdown">
+        <div class="section-header">
+          <p class="eyebrow">05</p>
+          <h2>Dropdown</h2>
+          <p class="page-intro">
+            Dropdowns reduce visual clutter when users need to choose one option from
+            a short predefined set such as project type or display order.
+          </p>
+        </div>
+
+        <div class="component-layout">
+          <article class="component-preview-panel">
+            <div class="component-showcase compact">
+              <label class="field-row">
+                <span class="field-label">Default</span>
+                <select class="ds-select">
+                  <option selected>Select category</option>
+                  <option>Film</option>
+                  <option>Game</option>
+                  <option>Photography</option>
+                  <option>Design</option>
+                </select>
+              </label>
+              <label class="field-row">
+                <span class="field-label">Focus</span>
+                <select class="ds-select is-focus">
+                  <option selected>Focused state</option>
+                </select>
+              </label>
+              <label class="field-row">
+                <span class="field-label">Error</span>
+                <select class="ds-select is-error" aria-invalid="true">
+                  <option selected>Please choose</option>
+                </select>
+              </label>
+              <label class="field-row">
+                <span class="field-label">Disabled</span>
+                <select class="ds-select" disabled>
+                  <option selected>Unavailable</option>
+                </select>
+              </label>
+            </div>
+          </article>
+
+          <article class="component-doc-panel">
+            <div class="doc-grid">
+              <article class="doc-card">
+                <p class="label">Use it for</p>
+                <ul class="guideline-list">
+                  <li>Short lists with one clearly selected option.</li>
+                  <li>Cases where a text input would introduce unnecessary ambiguity.</li>
+                </ul>
+              </article>
+              <article class="doc-card">
+                <p class="label">Avoid when</p>
+                <ul class="guideline-list">
+                  <li>Users need to compare all options at once.</li>
+                  <li>The list is long enough to require search or grouping.</li>
+                </ul>
+              </article>
+            </div>
+            <p><strong>Anatomy:</strong> label, selected value, indicator, list of options, helper or error text.</p>
+            <p><strong>Accessibility:</strong> a native <code>&lt;select&gt;</code> keeps keyboard support and screen-reader semantics without extra scripting, which is the best fit for this system.</p>
+          </article>
+        </div>
+
+        <pre class="component-code">&lt;label class="field-row"&gt;
+  &lt;span class="field-label"&gt;Category&lt;/span&gt;
+  &lt;select class="ds-select"&gt;
+    &lt;option&gt;Film&lt;/option&gt;
+  &lt;/select&gt;
+&lt;/label&gt;</pre>
+      </section>
+
+      <section class="content-section" id="cards">
+        <div class="section-header">
+          <p class="eyebrow">06</p>
+          <h2>Cards and Thumbnail</h2>
+          <p class="page-intro">
+            Cards contain related information and thumbnails pair aspect-ratio media
+            with titles and metadata. They are the most portfolio-specific reusable
+            patterns in the system.
+          </p>
+        </div>
+
+        <div class="component-grid">
+          <article class="component-preview-panel">
+            <p class="label">Content card</p>
+            <article class="ds-card is-hover">
+              <p class="label">Card</p>
+              <h3>Structured content container</h3>
+              <p>
+                Cards group a title, supporting copy, and optional metadata into a
+                consistent reading surface for documentation and references.
+              </p>
+            </article>
+          </article>
+
+          <article class="component-preview-panel">
+            <p class="label">Thumbnail card</p>
+            <article class="ds-media-card is-hover">
+              <div class="ds-media-thumb ratio-16-9">
+                <div class="ds-media-placeholder">
+                  <span>16:9</span>
+                  <small>Project preview</small>
+                </div>
+              </div>
+              <div class="ds-media-body">
+                <p class="label">Short film</p>
+                <h3>Project title</h3>
+                <p>A thumbnail pattern for case studies, galleries, and archive grids.</p>
+              </div>
+            </article>
+          </article>
+        </div>
+
+        <div class="doc-grid">
+          <article class="doc-card">
+            <p class="label">Use it for</p>
+            <ul class="guideline-list">
+              <li>Summaries, reference blocks, and grouped content with equal hierarchy.</li>
+              <li>Project thumbnails where image ratio and metadata need to travel together.</li>
+            </ul>
+          </article>
+          <article class="doc-card">
+            <p class="label">Accessibility</p>
+            <ul class="guideline-list">
+              <li>Use meaningful alt text when a thumbnail image conveys content.</li>
+              <li>Keep linked cards clearly interactive with hover and focus states.</li>
+            </ul>
+          </article>
+        </div>
+
+        <pre class="component-code">&lt;article class="ds-media-card"&gt;
+  &lt;div class="ds-media-thumb ratio-16-9"&gt;...&lt;/div&gt;
   &lt;div class="ds-media-body"&gt;
     &lt;p class="label"&gt;Short film&lt;/p&gt;
     &lt;h3&gt;Project title&lt;/h3&gt;
   &lt;/div&gt;
 &lt;/article&gt;</pre>
       </section>
+
+      <section class="content-section" id="alert">
+        <div class="section-header">
+          <p class="eyebrow">07</p>
+          <h2>Alert</h2>
+          <p class="page-intro">
+            Alerts communicate status without taking users out of the current flow.
+            They are useful for submission feedback, publishing state, or system
+            notices.
+          </p>
+        </div>
+
+        <div class="component-layout">
+          <article class="component-preview-panel">
+            <div class="alert-stack">
+              <div class="ds-alert info" role="status">
+                <div>
+                  <strong>Draft saved</strong>
+                  <p>Your notes have been stored locally.</p>
+                </div>
+                <button class="alert-dismiss" type="button" aria-label="Dismiss alert">Close</button>
+              </div>
+              <div class="ds-alert success" role="status">
+                <div>
+                  <strong>Project published</strong>
+                  <p>The case study is now visible in the archive.</p>
+                </div>
+              </div>
+              <div class="ds-alert warning" role="status">
+                <div>
+                  <strong>Metadata incomplete</strong>
+                  <p>Add a project category before exporting.</p>
+                </div>
+              </div>
+              <div class="ds-alert error" role="alert">
+                <div>
+                  <strong>Submission failed</strong>
+                  <p>Check the required fields and try again.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="component-doc-panel">
+            <div class="doc-grid">
+              <article class="doc-card">
+                <p class="label">Use it for</p>
+                <ul class="guideline-list">
+                  <li>Short, contextual updates that need immediate visibility.</li>
+                  <li>Success, information, warning, or error messaging near the related action.</li>
+                </ul>
+              </article>
+              <article class="doc-card">
+                <p class="label">Avoid when</p>
+                <ul class="guideline-list">
+                  <li>A blocking confirmation requires explicit user choice.</li>
+                  <li>The message is decorative rather than actionable.</li>
+                </ul>
+              </article>
+            </div>
+            <p><strong>Anatomy:</strong> tone, title, supporting message, optional dismiss action.</p>
+            <p><strong>Accessibility:</strong> use <code>role="status"</code> for passive updates and <code>role="alert"</code> for urgent errors that should be announced immediately.</p>
+          </article>
+        </div>
+
+        <pre class="component-code">&lt;div class="ds-alert error" role="alert"&gt;
+  &lt;div&gt;
+    &lt;strong&gt;Submission failed&lt;/strong&gt;
+    &lt;p&gt;Check the required fields and try again.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+      </section>
+
+      <section class="content-section" id="tooltip">
+        <div class="section-header">
+          <p class="eyebrow">08</p>
+          <h2>Tooltip</h2>
+          <p class="page-intro">
+            Tooltips provide brief clarification for controls with non-obvious labels.
+            They should support, not replace, visible labels.
+          </p>
+        </div>
+
+        <div class="component-layout">
+          <article class="component-preview-panel">
+            <div class="component-showcase">
+              <div class="tooltip-demo">
+                <button
+                  class="ds-button is-secondary"
+                  type="button"
+                  aria-describedby="tooltip-collections"
+                  data-tooltip-target="tooltip-collections"
+                >
+                  Collections label
+                </button>
+                <div class="tooltip-bubble" id="tooltip-collections" role="tooltip" hidden>
+                  Use collections to group related work without changing project categories.
+                </div>
+              </div>
+              <p class="component-caption">Hover or focus the button to reveal the tooltip.</p>
+            </div>
+          </article>
+
+          <article class="component-doc-panel">
+            <div class="doc-grid">
+              <article class="doc-card">
+                <p class="label">Use it for</p>
+                <ul class="guideline-list">
+                  <li>Short clarifications that help interpret a label or icon.</li>
+                  <li>Supplemental guidance that is useful but not required for task completion.</li>
+                </ul>
+              </article>
+              <article class="doc-card">
+                <p class="label">Avoid when</p>
+                <ul class="guideline-list">
+                  <li>The content is essential instruction or validation feedback.</li>
+                  <li>The message is longer than a short sentence.</li>
+                </ul>
+              </article>
+            </div>
+            <p><strong>Anatomy:</strong> trigger, tooltip bubble, arrow, helper text relationship.</p>
+            <p><strong>Accessibility:</strong> tooltip content must also be available to keyboard users, and critical information should remain visible in the layout instead of hidden behind hover.</p>
+          </article>
+        </div>
+
+        <pre class="component-code">&lt;button aria-describedby="tooltip-id" data-tooltip-target="tooltip-id"&gt;Collections label&lt;/button&gt;
+&lt;div id="tooltip-id" role="tooltip" hidden&gt;Short clarification.&lt;/div&gt;</pre>
+      </section>
+
+      <section class="content-section" id="progress">
+        <div class="section-header">
+          <p class="eyebrow">09</p>
+          <h2>Progress</h2>
+          <p class="page-intro">
+            Progress indicators communicate completion through a simple bar and text
+            label. They work well for uploads, longer forms, or staged publishing.
+          </p>
+        </div>
+
+        <div class="component-layout">
+          <article class="component-preview-panel">
+            <div class="component-showcase compact">
+              <div class="progress-meta">
+                <span class="field-label">Portfolio setup</span>
+                <span class="state-label">72%</span>
+              </div>
+              <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="72" aria-label="Portfolio setup progress">
+                <div class="progress-bar" style="width: 72%;"></div>
+              </div>
+              <p class="helper-text">Always pair the bar with a text value or status label.</p>
+            </div>
+          </article>
+
+          <article class="component-doc-panel">
+            <div class="doc-grid">
+              <article class="doc-card">
+                <p class="label">Use it for</p>
+                <ul class="guideline-list">
+                  <li>Task progress that changes over time.</li>
+                  <li>Multi-step flows where users benefit from knowing how much remains.</li>
+                </ul>
+              </article>
+              <article class="doc-card">
+                <p class="label">Avoid when</p>
+                <ul class="guideline-list">
+                  <li>The action is effectively instant.</li>
+                  <li>The system cannot estimate completion meaningfully.</li>
+                </ul>
+              </article>
+            </div>
+            <p><strong>Anatomy:</strong> label, percentage or status text, track, fill.</p>
+            <p><strong>Accessibility:</strong> expose the numeric value with <code>aria-valuenow</code> and do not rely on color alone to convey completion.</p>
+          </article>
+        </div>
+
+        <pre class="component-code">&lt;div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="72"&gt;
+  &lt;div class="progress-bar" style="width: 72%;"&gt;&lt;/div&gt;
+&lt;/div&gt;</pre>
+      </section>
+
+      <section class="content-section" id="dialog">
+        <div class="section-header">
+          <p class="eyebrow">10</p>
+          <h2>Dialog / Modal</h2>
+          <p class="page-intro">
+            Dialogs interrupt the current flow to request confirmation or present a
+            focused decision. They should be used sparingly and reserved for tasks
+            that cannot be handled inline.
+          </p>
+        </div>
+
+        <div class="component-layout">
+          <article class="component-preview-panel">
+            <div class="component-showcase">
+              <button class="ds-button" type="button" data-dialog-open="publish-dialog">Open dialog</button>
+              <div class="dialog-scrim" id="publish-dialog" hidden>
+                <div class="ds-dialog" role="dialog" aria-modal="true" aria-labelledby="publish-dialog-title" aria-describedby="publish-dialog-description">
+                  <p class="label">Confirmation</p>
+                  <h3 id="publish-dialog-title">Publish project update?</h3>
+                  <p id="publish-dialog-description">
+                    This will replace the current portfolio summary and make the new
+                    version visible immediately.
+                  </p>
+                  <div class="dialog-actions">
+                    <button class="ds-button" type="button" data-dialog-close="publish-dialog">Publish</button>
+                    <button class="ds-button is-secondary" type="button" data-dialog-close="publish-dialog">Cancel</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="component-doc-panel">
+            <div class="doc-grid">
+              <article class="doc-card">
+                <p class="label">Use it for</p>
+                <ul class="guideline-list">
+                  <li>High-impact confirmations, destructive actions, or brief focused tasks.</li>
+                  <li>Moments where background content should be temporarily paused.</li>
+                </ul>
+              </article>
+              <article class="doc-card">
+                <p class="label">Avoid when</p>
+                <ul class="guideline-list">
+                  <li>The task can be completed inline with less interruption.</li>
+                  <li>The content becomes long, scroll-heavy, or multi-step.</li>
+                </ul>
+              </article>
+            </div>
+            <p><strong>Anatomy:</strong> scrim, dialog container, title, message, primary action, dismiss action.</p>
+            <p><strong>Accessibility:</strong> identify the dialog with <code>role="dialog"</code> and <code>aria-modal="true"</code>, move focus into it when opened, and provide a reliable close action.</p>
+          </article>
+        </div>
+
+        <pre class="component-code">&lt;div class="ds-dialog" role="dialog" aria-modal="true" aria-labelledby="dialog-title"&gt;
+  &lt;h3 id="dialog-title"&gt;Publish project update?&lt;/h3&gt;
+  &lt;button type="button"&gt;Publish&lt;/button&gt;
+  &lt;button type="button"&gt;Cancel&lt;/button&gt;
+&lt;/div&gt;</pre>
+      </section>
+
+      <section class="content-section" id="form">
+        <div class="section-header">
+          <p class="eyebrow">11</p>
+          <h2>Form Example</h2>
+          <p class="page-intro">
+            This example combines the form-related components into one realistic
+            submission pattern. It demonstrates labels, helper text, required
+            fields, validation, grouped controls, and submit actions.
+          </p>
+        </div>
+
+        <form class="form-shell" action="#" method="post">
+          <div class="form-grid">
+            <label class="field-row">
+              <span class="field-label-row">
+                <span class="field-label">Project name</span>
+                <span class="field-meta">Required</span>
+              </span>
+              <input class="ds-input" type="text" name="project-name" placeholder="Echo Lake" required />
+            </label>
+
+            <label class="field-row">
+              <span class="field-label-row">
+                <span class="field-label">Release year</span>
+                <span class="field-meta">Required</span>
+              </span>
+              <input class="ds-input is-hover" type="text" name="release-year" placeholder="2026" required />
+            </label>
+
+            <label class="field-row">
+              <span class="field-label">Category</span>
+              <select class="ds-select" name="category">
+                <option selected>Choose a category</option>
+                <option>Film</option>
+                <option>Game</option>
+                <option>Photography</option>
+                <option>Design</option>
+              </select>
+            </label>
+
+            <fieldset class="control-stack">
+              <legend class="control-label">Presentation type</legend>
+              <div class="choice-group">
+                <label class="choice-row">
+                  <input type="radio" name="presentation-type" checked />
+                  <span>Thumbnail card</span>
+                </label>
+                <label class="choice-row">
+                  <input type="radio" name="presentation-type" />
+                  <span>Feature layout</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <label class="field-row full-span">
+              <span class="field-label">Summary</span>
+              <textarea class="ds-textarea" name="summary" placeholder="Describe the project in one short paragraph."></textarea>
+              <span class="helper-text">Keep the summary under 280 characters for archive layouts.</span>
+            </label>
+
+            <fieldset class="control-stack full-span">
+              <legend class="control-label">Include assets</legend>
+              <div class="choice-group">
+                <label class="choice-row">
+                  <input type="checkbox" checked />
+                  <span>Poster image</span>
+                </label>
+                <label class="choice-row">
+                  <input type="checkbox" />
+                  <span>Behind-the-scenes gallery</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <div class="control-stack full-span">
+              <span class="control-label">Enable captions</span>
+              <div class="switch-row">
+                <button class="ds-switch" type="button" role="switch" aria-checked="false" aria-label="Enable captions"></button>
+                <span class="input-note">Use for video or motion-heavy projects.</span>
+              </div>
+            </div>
+
+            <label class="field-row full-span">
+              <span class="field-label-row">
+                <span class="field-label">Contact email</span>
+                <span class="field-meta">Validation example</span>
+              </span>
+              <input class="ds-input is-error" type="email" value="luca@" aria-invalid="true" aria-describedby="form-email-error" />
+              <span class="helper-text error" id="form-email-error">Add the full email address before submitting.</span>
+            </label>
+          </div>
+
+          <div class="form-actions">
+            <button class="ds-button" type="submit">Submit project</button>
+            <button class="ds-button is-secondary" type="reset">Reset</button>
+          </div>
+        </form>
+
+        <div class="doc-grid">
+          <article class="doc-card">
+            <p class="label">Form guidance</p>
+            <ul class="guideline-list">
+              <li>Use visible labels instead of placeholder-only fields.</li>
+              <li>Place helper text below the field and errors adjacent to the problem.</li>
+              <li>Keep required inputs minimal so the form feels manageable.</li>
+            </ul>
+          </article>
+          <article class="doc-card">
+            <p class="label">Accessibility</p>
+            <ul class="guideline-list">
+              <li>Use native <code>fieldset</code> and <code>legend</code> for grouped controls.</li>
+              <li>Associate errors with the input using <code>aria-describedby</code> and <code>aria-invalid</code>.</li>
+              <li>Preserve keyboard access to all controls, including switches and submit actions.</li>
+            </ul>
+          </article>
+        </div>
+
+        <pre class="component-code">&lt;fieldset class="control-stack"&gt;
+  &lt;legend class="control-label"&gt;Presentation type&lt;/legend&gt;
+  &lt;label class="choice-row"&gt;
+    &lt;input type="radio" name="presentation-type" /&gt;
+    &lt;span&gt;Thumbnail card&lt;/span&gt;
+  &lt;/label&gt;
+&lt;/fieldset&gt;</pre>
+      </section>
+
     </main>
   </div>
+
+  <script src="js/site.js"></script>
 </body>
 </html>
