@@ -43,10 +43,11 @@
         <p class="eyebrow">Component Library</p>
         <h1>Components</h1>
         <p class="page-intro">
-          Components translate the foundations into repeatable interface patterns for
-          portfolio pages, project filters, forms, and content modules. The emphasis
-          is on restrained styling, clear interaction states, and documentation that
-          can support reuse instead of one-off mockups.
+          Components translate the foundations into repeatable interface patterns
+          for portfolio pages, project filters, forms, and content modules. The
+          emphasis is on restrained styling, clear interaction states, and
+          documentation that supports reuse instead of reinventing patterns each
+          time.
         </p>
       </header>
 
@@ -58,7 +59,7 @@
             <ul class="priority-list">
               <li>Every core component documents default, hover, focus, active, disabled, or error states where relevant.</li>
               <li>Each pattern includes usage guidance, anatomy, accessibility notes, and starter code.</li>
-              <li>Component styling is tied back to shared tokens for spacing, radius, color, and focus treatment.</li>
+              <li>Component styling ties back to shared tokens for spacing, radius, color, and focus treatment.</li>
             </ul>
           </article>
 
@@ -87,9 +88,9 @@
           <p class="eyebrow">01</p>
           <h2>Button</h2>
           <p class="page-intro">
-            Buttons trigger a single clear action. The primary orange button is used
-            sparingly for high-priority actions, while a quieter secondary style
-            supports cancel, view, and supporting actions.
+            Buttons trigger a single clear action. The primary orange button is
+            used sparingly for high-priority actions, while a quieter secondary
+            style supports cancel, view, and supporting actions.
           </p>
         </div>
 
@@ -128,7 +129,7 @@
               </article>
             </div>
             <p><strong>Anatomy:</strong> container, text label, optional icon, state treatment, focus ring.</p>
-            <p><strong>Accessibility:</strong> use a real <code>&lt;button&gt;</code> for in-page actions, keep labels action-oriented, and preserve visible focus on both mouse-free and keyboard flows.</p>
+            <p><strong>Accessibility:</strong> use a real <code>&lt;button&gt;</code> for in-page actions, keep labels action-oriented, and preserve visible focus for both mouse-free and keyboard flows.</p>
           </article>
         </div>
 
@@ -141,12 +142,12 @@
           <article class="state-card">
             <div class="state-preview"><button class="ds-button is-hover" type="button">Hover</button></div>
             <h3>Hover and focus</h3>
-            <p>Hover lifts slightly while focus swaps motion for a clear ring so keyboard navigation stays visible.</p>
+            <p>Hover lifts slightly, while focus trades motion for a clear ring so keyboard navigation stays visible.</p>
           </article>
           <article class="state-card">
             <div class="state-preview"><button class="ds-button is-active" type="button">Pressed</button></div>
             <h3>Active</h3>
-            <p>Pressed state darkens slightly and removes the lift to communicate click confirmation.</p>
+            <p>Pressed state darkens slightly and removes the lift to confirm the click.</p>
           </article>
           <article class="state-card">
             <div class="state-preview"><button class="ds-button" type="button" disabled>Disabled</button></div>
@@ -216,7 +217,7 @@
               </article>
             </div>
             <p><strong>Anatomy:</strong> label, optional metadata, field container, input value, helper or error message.</p>
-            <p><strong>Accessibility:</strong> every input needs a visible label, <code>aria-invalid</code> when in error, and helper text associated with <code>aria-describedby</code> where useful.</p>
+            <p><strong>Accessibility:</strong> every input needs a visible label, <code>aria-invalid</code> when in error, and helper text connected with <code>aria-describedby</code> where useful.</p>
           </article>
         </div>
 
@@ -232,9 +233,9 @@
           <p class="eyebrow">03</p>
           <h2>Checkbox and Radio</h2>
           <p class="page-intro">
-            Checkboxes support multi-select preferences and radios support a single
-            required choice. Both are documented as labeled choice groups rather
-            than standalone inputs.
+            Checkboxes support multi-select preferences, and radios support a
+            single required choice. Both are documented as labeled choice groups
+            rather than standalone inputs.
           </p>
         </div>
 
@@ -298,7 +299,7 @@
               </article>
             </div>
             <p><strong>Anatomy:</strong> group label, control, text label, optional helper or error message.</p>
-            <p><strong>Accessibility:</strong> keep the touch target on the label, group related radios with <code>&lt;fieldset&gt;</code> or <code>role="radiogroup"</code>, and never rely on color alone to show checked or invalid state.</p>
+            <p><strong>Accessibility:</strong> keep the touch target on the label, group related radios with <code>&lt;fieldset&gt;</code> or <code>role="radiogroup"</code>, and never rely on color alone to show checked or invalid states.</p>
           </article>
         </div>
 
@@ -362,7 +363,7 @@
               </article>
             </div>
             <p><strong>Anatomy:</strong> switch track, thumb, state label, and accessible name.</p>
-            <p><strong>Accessibility:</strong> use <code>role="switch"</code> with <code>aria-checked</code>, ensure the label explains the setting, and do not use the toggle alone to communicate critical status changes.</p>
+            <p><strong>Accessibility:</strong> use <code>role="switch"</code> with <code>aria-checked</code>, ensure the label explains the setting, and do not rely on the toggle alone to communicate critical status changes.</p>
           </article>
         </div>
 
@@ -374,8 +375,8 @@
           <p class="eyebrow">05</p>
           <h2>Dropdown</h2>
           <p class="page-intro">
-            Dropdowns reduce visual clutter when users need to choose one option from
-            a short predefined set such as project type or display order.
+            Dropdowns reduce visual clutter when users need to choose one option
+            from a short predefined set such as project type or display order.
           </p>
         </div>
 
@@ -431,7 +432,7 @@
               </article>
             </div>
             <p><strong>Anatomy:</strong> label, selected value, indicator, list of options, helper or error text.</p>
-            <p><strong>Accessibility:</strong> a native <code>&lt;select&gt;</code> keeps keyboard support and screen-reader semantics without extra scripting, which is the best fit for this system.</p>
+            <p><strong>Accessibility:</strong> a native <code>&lt;select&gt;</code> keeps keyboard support and screen-reader semantics without extra scripting, which makes it the best fit for this system.</p>
           </article>
         </div>
 
@@ -448,9 +449,9 @@
           <p class="eyebrow">06</p>
           <h2>Cards and Thumbnail</h2>
           <p class="page-intro">
-            Cards contain related information and thumbnails pair aspect-ratio media
-            with titles and metadata. They are the most portfolio-specific reusable
-            patterns in the system.
+            Cards contain related information, and thumbnails pair aspect-ratio
+            media with titles and metadata. They are the most portfolio-specific
+            reusable patterns in the system.
           </p>
         </div>
 
@@ -490,7 +491,7 @@
             <p class="label">Use it for</p>
             <ul class="guideline-list">
               <li>Summaries, reference blocks, and grouped content with equal hierarchy.</li>
-              <li>Project thumbnails where image ratio and metadata need to travel together.</li>
+              <li>Project thumbnails where image ratio and metadata need to stay together.</li>
             </ul>
           </article>
           <article class="doc-card">
@@ -516,9 +517,9 @@
           <p class="eyebrow">07</p>
           <h2>Alert</h2>
           <p class="page-intro">
-            Alerts communicate status without taking users out of the current flow.
-            They are useful for submission feedback, publishing state, or system
-            notices.
+            Alerts communicate status without taking users out of the current
+            flow. They are useful for submission feedback, publishing state, or
+            system notices.
           </p>
         </div>
 
@@ -571,7 +572,7 @@
               </article>
             </div>
             <p><strong>Anatomy:</strong> tone, title, supporting message, optional dismiss action.</p>
-            <p><strong>Accessibility:</strong> use <code>role="status"</code> for passive updates and <code>role="alert"</code> for urgent errors that should be announced immediately.</p>
+            <p><strong>Accessibility:</strong> use <code>role="status"</code> for passive updates and <code>role="alert"</code> for urgent errors that need to be announced immediately.</p>
           </article>
         </div>
 
@@ -588,8 +589,8 @@
           <p class="eyebrow">08</p>
           <h2>Tooltip</h2>
           <p class="page-intro">
-            Tooltips provide brief clarification for controls with non-obvious labels.
-            They should support, not replace, visible labels.
+            Tooltips provide brief clarification for controls with non-obvious
+            labels. They should support, not replace, visible labels.
           </p>
         </div>
 
@@ -631,7 +632,7 @@
               </article>
             </div>
             <p><strong>Anatomy:</strong> trigger, tooltip bubble, arrow, helper text relationship.</p>
-            <p><strong>Accessibility:</strong> tooltip content must also be available to keyboard users, and critical information should remain visible in the layout instead of hidden behind hover.</p>
+            <p><strong>Accessibility:</strong> tooltip content must also be available to keyboard users, and critical information should stay visible in the layout instead of hiding behind hover.</p>
           </article>
         </div>
 
@@ -644,8 +645,9 @@
           <p class="eyebrow">09</p>
           <h2>Progress</h2>
           <p class="page-intro">
-            Progress indicators communicate completion through a simple bar and text
-            label. They work well for uploads, longer forms, or staged publishing.
+            Progress indicators communicate completion through a simple bar and
+            text label. They work well for uploads, longer forms, or staged
+            publishing.
           </p>
         </div>
 
@@ -695,9 +697,9 @@
           <p class="eyebrow">10</p>
           <h2>Dialog / Modal</h2>
           <p class="page-intro">
-            Dialogs interrupt the current flow to request confirmation or present a
-            focused decision. They should be used sparingly and reserved for tasks
-            that cannot be handled inline.
+            Dialogs interrupt the current flow to request confirmation or present
+            a focused decision. They should be used sparingly and reserved for
+            tasks that cannot be handled inline.
           </p>
         </div>
 
@@ -740,7 +742,7 @@
               </article>
             </div>
             <p><strong>Anatomy:</strong> scrim, dialog container, title, message, primary action, dismiss action.</p>
-            <p><strong>Accessibility:</strong> identify the dialog with <code>role="dialog"</code> and <code>aria-modal="true"</code>, move focus into it when opened, and provide a reliable close action.</p>
+            <p><strong>Accessibility:</strong> identify the dialog with <code>role="dialog"</code> and <code>aria-modal="true"</code>, move focus into it when it opens, and provide a reliable close action.</p>
           </article>
         </div>
 
